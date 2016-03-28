@@ -16,4 +16,5 @@ Route::get('/', function()
 	return View::make('layout.content');
 });
 
-Route::any('/clients', 'ClientsController@index');
+Route::get('/clients', 'ClientsController@index');
+Route::get('clients/{id}/edit', 'ClientsController@edit');
