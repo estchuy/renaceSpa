@@ -9,12 +9,12 @@ class ClientsController extends \BaseController {
 	 */
 	public function index()
 	{
-	//	$clients = Client::all();
+		$clients = Client::all();
 		$perpage = 10;
 
-		$this->layout->content = View::make('clients.index');
-//            ->with('perpage', $perpage)
-  //          ->with('clients', $clients);
+		$this->layout->content = View::make('clients.index')            
+		->with('perpage', $perpage)
+		->with('clients', $clients);
 	}
 
 
@@ -60,7 +60,7 @@ class ClientsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		
 	}
 
 
