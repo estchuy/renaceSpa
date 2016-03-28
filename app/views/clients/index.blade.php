@@ -1,9 +1,4 @@
 @section('content')
-<<<<<<< HEAD
-<h3>
-chuy RULES push client lets go
-</h3>
-=======
 <div class="row mt">
   <div class="col-md-12">
       <section class="task-panel tasks-widget">
@@ -96,6 +91,4 @@ chuy RULES push client lets go
       </section>
   </div><!-- /col-md-12-->
 </div><!-- /row -->
->>>>>>> origin/pdf
-
 @stop
