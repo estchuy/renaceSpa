@@ -1,6 +1,6 @@
 @section('content')
 <h3>
-chuy RULES
+chuy RULES push client lets go
 </h3>
 
 @stop
