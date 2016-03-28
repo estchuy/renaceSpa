@@ -23,11 +23,11 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'homestead',
-			'username'  => 'homestead',
-			'password'  => 'secret',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
+			'database'  => 'loanSystem',
+			'username'  => 'sqladmin',
+			'password'  => 'CHester2685',
+			'charset'   => 'latin1',
+			'collation' => 'latin_swedish_ci',
 			'prefix'    => '',
 		),
 

@@ -12,6 +12,12 @@
                           <span>Dashboard</span>
                       </a>
                   </li>
+		 <li class="mt">
+                      <a class="active" href="/clients">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Clients</span>
+                      </a>
+                  </li>
 
                   <li class="sub-menu">
                       <a href="javascript:;" >

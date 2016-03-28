@@ -15,3 +15,5 @@ Route::get('/', function()
 {
 	return View::make('layout.content');
 });
+
+Route::any('/clients', 'ClientsController@index');
