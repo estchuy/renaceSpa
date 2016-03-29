@@ -1,20 +1,12 @@
 @section('content')
 <?php
-$interes_mensual = 10;
-$tiempo_meses = 6;
-$capital = "2500";
- 
-//calculamos el interes y lo multiplicamos por el tiempo
-$interes = ($interes_mensual*$tiempo_meses)/100;
- 
-//aplicamos el interes al capital
-$total = ($capital*$interes)+$capital;
- 
-echo "Total a pagar: ".$total."<br>";
-echo "Total Global Interes: ".($interes*100)."%<br>";
- 
-//monto de la cuota
-echo "Debe pagar ".$tiempo_meses." cuotas de ".round(($total/$tiempo_meses),2);
+$amnt = 10;
+$I = 10 / 12 / 100 ;
+$I2 = $I + 1 ;
+$I2 = pow($I2,-6) ;
+
+$CuotaMensual = ($I * 2500) / (1 - $I2) ;
+echo $CuotaMensual;
 ?>
 <section class="wrapper">
 	<div class="row mt">
