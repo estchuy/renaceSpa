@@ -17,6 +17,10 @@ class ClientsController extends \BaseController {
 		->with('clients', $clients);
 	}
 
+	public function calculoCuotas(){
+		$this->layout->content = View::make('clients.calculoCuotas');
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.

@@ -18,8 +18,4 @@ Route::get('/', function()
 
 Route::get('/clients', 'ClientsController@index');
 Route::get('clients/{id}/edit', 'ClientsController@edit');
-View::name('layout.content', 'layout');
-$layout = View::of('layout');
-Route::get('/calculoCuotas', function(){
-	$layout->content = View::make('clients.index') 
-});
+Route::get('/calculoCuotas', 'ClientsController@calculoCuotas');
