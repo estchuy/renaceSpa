@@ -1,4 +1,21 @@
 @section('content')
+<?php
+$interes_mensual = 10;
+$tiempo_meses = 6;
+$capital = "2500";
+ 
+//calculamos el interes y lo multiplicamos por el tiempo
+$interes = ($interes_mensual*$tiempo_meses)/100;
+ 
+//aplicamos el interes al capital
+$total = ($capital*$interes)+$capital;
+ 
+echo "Total a pagar: ".$total."<br>";
+echo "Total Global Interes: ".($interes*100)."%<br>";
+ 
+//monto de la cuota
+echo "Debe pagar ".$tiempo_meses." cuotas de ".round(($total/$tiempo_meses),2);
+?>
 <section class="wrapper">
 	<div class="row mt">
 	  <div class="col-md-12">
@@ -19,7 +36,7 @@
 	              </thead>
 	              <tbody>
 	              	<tr>
-		                <td><a href="clients/{{$id}}/edit">Company Ltd</a></td>
+		                <td><a href="clients/{{id}}/edit">Company Ltd</a></td>
 		                <td>$ {{number_format($amnt, 2, '.', ',')}}</td>
 		                <td>$ {{number_format($amnt, 2, '.', ',')}}</td>
 		                <td><span class="label label-info label-mini"> 6 </span></td>
