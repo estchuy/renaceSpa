@@ -17,21 +17,23 @@
 		interesTotal = 0;
 		while(ii < p){
 			interes = (capital * ((i/100)/12)).toFixed(2);
-			interesTotal = interesTotal + interes;
+			interesTotal = parseFloat(interesTotal) + parseFloat(interes);
 			capitalMes = (cuotaMensual-interes).toFixed(2);
 			capital = (capital - capitalMes).toFixed(2);
 
 			if(capital < 1 && capital > 0){
-				capitalMes = capitalMes + capital;
-				capital = 0;
+				interes = parseFloat(interes) + parseFloat(capital);
+				interesTotal = parseFloat(interesTotal) + parseFloat(capital);
+				capital = 0.00;
 			}
-			
+
 			ii++;
 
 			headerTableHtml += '<tr><td>'+ii+'</td><td>Q '+cuotaMensual+'</td><td>Q '+interes+'</td><td>Q '+capitalMes+'</td><td>Q '+capital+'</td></tr>';
 		}
+		interesTotal = interesTotal.toFixed(2);
 		headerTableHtml += '</tbody></table>';
-	    document.getElementById("resultCalculo").innerHTML = "<strong>Interes Total Q "+(interesTotal).toFixed(2)+"</strong><br>"+headerTableHtml;
+	    document.getElementById("resultCalculo").innerHTML = "<strong>Interes Total Q "+interesTotal+"</strong><br>"+headerTableHtml;
 	    document.getElementById("resultCalculo").style.display = 'block';
 	}
 </script>
