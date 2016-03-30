@@ -66,7 +66,11 @@ class ClientsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		
+		$client = Client::find($id);
+		$loans = Loan::where('client_id', $id)->get();
+		$this->layout->content = View::make('clients.edit')            
+		->with('client', $client)
+		->with('loans', $loans);
 	}
 
 
