@@ -66,7 +66,9 @@ class ClientsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		
+		$this->layout->content = View::make('clients.index')            
+		->with('perpage', $perpage)
+		->with('clients', $clients);
 	}
 
 
