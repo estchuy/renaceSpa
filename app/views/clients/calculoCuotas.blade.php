@@ -24,7 +24,10 @@
 			if(capital < 1 && capital > 0){
 				interes = parseFloat(interes) + parseFloat(capital);
 				interesTotal = parseFloat(interesTotal) + parseFloat(capital);
-				capital = 0.00;
+				capital = (0).toFixed(2);
+			}
+			if(capital < 0){
+				capital = (0).toFixed(2);
 			}
 
 			ii++;
