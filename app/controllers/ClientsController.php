@@ -9,7 +9,9 @@ class ClientsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$clients = Client::all();
+		$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
+		->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
+		->get();
 		$perpage = 10;
 
 		$this->layout->content = View::make('clients.index')            

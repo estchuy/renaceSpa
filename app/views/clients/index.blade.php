@@ -17,15 +17,17 @@
 	                  <th></th>
 	              </tr>
 	              </thead>
-	              <tbody>	
+	              <tbody>
+	              @foreach($clients as $client)	
 	              	<tr>
-		                <td><a href="clients/{{id}}/edit">Company Ltd</a></td>
-		                <td>$ {{number_format($amnt, 2, '.', ',')}}</td>
-		                <td>$ {{number_format($amnt, 2, '.', ',')}}</td>
-		                <td><span class="label label-info label-mini"> 6 </span></td>
-		                <td>18% Anual</td>
+		                <td><a href="clients/{{$client->id}}/edit">{{$client->name}}</a></td>
+		                <td>Q{{number_format($client->amnt, 2, '.', ',')}}</td>
+		                <td>Q{{number_format($client->monthly_payment, 2, '.', ',')}}</td>
+		                <td><span class="label label-info label-mini">{{$client->period_id}}</span></td>
+		                <td>{{$client->interest}}</td>
 		                <td><span class="label label-info label-mini"> en Proceso </span></td>
 	              	</tr>
+	              	@endforeach
 	           	</tbody>
 	          </table>
 	      </div><!-- /content-panel -->
