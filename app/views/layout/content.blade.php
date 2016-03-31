@@ -100,7 +100,7 @@
             // (string | mandatory) the text inside the notification
             text: 'CHUY DYSCHUY',
             // (string | optional) the image to display on the left
-            image: '<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/img/dysCHUY.jpg',
+            image: 'http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/img/dysCHUY.jpg',
             // (bool | optional) if you want it to fade out on its own or just sit there
             sticky: true,
             // (int | optional) the time you want it to be alive for before fading out
