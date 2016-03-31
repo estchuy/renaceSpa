@@ -10,18 +10,18 @@
     <title>LOAN System</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/lineicons/style.css">    
+    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/lineicons/style.css">    
     
     <!-- Custom styles for this template -->
-    <link href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style.css" rel="stylesheet">
-    <link href="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style-responsive.css" rel="stylesheet">
+    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style.css" rel="stylesheet">
+    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style-responsive.css" rel="stylesheet">
 
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/chart-master/Chart.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/chart-master/Chart.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -72,24 +72,24 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.js"></script>
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery-1.8.3.min.js"></script>
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.sparkline.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery-1.8.3.min.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.sparkline.js"></script>
 
 
     <!--common script for all pages-->
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/common-scripts.js"></script>
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/common-scripts.js"></script>
     
-    <script type="text/javascript" src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter-conf.js"></script>
+    <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/sparkline-chart.js"></script>    
-	<script src="<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/zabuto_calendar.js"></script>	
+    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/sparkline-chart.js"></script>    
+	<script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/zabuto_calendar.js"></script>	
 	
 	<script type="text/javascript">
     //mensaje de alerta
