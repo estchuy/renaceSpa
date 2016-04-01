@@ -28,7 +28,6 @@
 	                  <th><i class="fa fa-bookmark"></i> Cuotas</th>
 	                  <th><i class="fa fa-bookmark"></i> Plazo</th>
 	                  <th><i class="fa fa-bookmark"></i> Interes</th>
-	                  <th><i class=" fa fa-edit"></i> Status</th>
 	                  <th></th>
 	              </tr>
 	              </thead>
@@ -40,7 +39,6 @@
 		                <td>Q{{number_format($client->monthly_payment, 2, '.', ',')}}</td>
 		                <td><span class="label label-info label-mini">{{$client->period_id}}</span></td>
 		                <td>{{$client->interest}}</td>
-		                <td><span class="label label-info label-mini"> en Proceso </span></td>
 	              	</tr>
 	              	@endforeach
 	           	</tbody>
