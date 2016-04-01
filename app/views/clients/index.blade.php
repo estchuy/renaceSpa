@@ -35,9 +35,14 @@
 	              @foreach($clients as $client)	
 	              <?php
 	              	$loanDetails = Loan::getLoanInfo($client->id);
-	              	$countLoans = $loanDetails->count_loan;
-	              	$totalLoans = $loanDetails->totalloan;
-	              	$totalMonth = $loanDetails->monthly_payment;
+	              	$countLoans = 0;
+	              	$totalLoans = 0;
+	              	$totalMonth = 0;
+	              	if(isset($loanDetails->count_loan)){
+		              	$countLoans = $loanDetails->count_loan;
+		              	$totalLoans = $loanDetails->totalloan;
+		              	$totalMonth = $loanDetails->monthly_payment;
+		            }
 	              ?>
 	              	<tr>
 		                <td><a href="clients/{{$client->id}}/edit">{{$client->name}}</a></td>
