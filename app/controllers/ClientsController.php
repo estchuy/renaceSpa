@@ -10,17 +10,10 @@ class ClientsController extends \BaseController {
 	public function index()
 	{
 		if (Input::has('nombre')) {
-			$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
-			->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
-			->whereRaw("(clients.name like ? or clients.company like ?)", array("%" . Input::get("nombre") . "%", "%" . Input::get("nombre") . "%"))  
+			$clients = Client::whereRaw("(clients.name like ? or clients.company like ?)", array("%" . Input::get("nombre") . "%", "%" . Input::get("nombre") . "%"))  
 			->get();
 		}else{
-			$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
-			->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
-			->orderBy('loans.period_id', 'desc')
-			->groupBy('loans.client_id')
-			->groupBy('loans.parent_id')
-			->get();
+			$clients = Client::all();
 		}
 		$perpage = 10;
 
