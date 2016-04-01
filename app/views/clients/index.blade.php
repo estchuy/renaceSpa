@@ -4,8 +4,23 @@
 	  <div class="col-md-12">
 	      <div class="content-panel">
 	          <table class="table table-striped table-advance table-hover">
-	      	  	  <h4><i class="fa fa-users"></i> Clientes</h4>
-	      	  	  <hr>
+	          	<form method="get" class="form-horizontal tasi-form" id="clientForm" action="/clients">
+		      	 	<div class="form-group">
+				       	<label class="col-sm-2 control-label"><h4><i class="fa fa-users"></i> Clientes</h4></label>
+			  			<div class="col-sm-5">
+			            	<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="form-control round-form">
+			            </div>
+			  			<div class="col-sm-1">
+			            	<button type="button" class="btn btn-round btn-warning" onclick="javascript:document.getElementById('clientForm').submit();">Buscar</button>
+			  			</div>
+			  			<div class="col-sm-1">
+			            	<button type="button" class="btn btn-round btn-primary" onclick="javascript:window.location = '/clients/new';">Nuevo</button>
+			  			</div>
+			            <div class="col-sm-12">
+			             	<hr>
+			            </div>
+	  				</div>
+  				</form>
 	              <thead>
 	              <tr>
 	                  <th><i class="fa fa-user"></i> Cliente</th>
