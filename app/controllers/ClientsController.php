@@ -57,7 +57,7 @@ class ClientsController extends \BaseController {
 	    	$p->personal_id = Input::get('dpi');
 	    	$p->address = Input::get('address');
 	    	$p->phone = Input::get('phone');
-	    	if(isset(Input::get('company'))){
+	    	if(Input::has('company')){
 	    		$p->company = Input::get('company');
 	    	}
 	    	$msg = "Cliente Actualizado!!!";
@@ -70,7 +70,7 @@ class ClientsController extends \BaseController {
 	    	$p->personal_id = Input::get('dpi');
 	    	$p->address = Input::get('address');
 	    	$p->phone = Input::get('phone');
-	    	if(isset(Input::get('company'))){
+	    	if(Input::has('company')){
 	    		$p->company = Input::get('company');
 	    	}
 	    	$msg = "Cliente Creado!!!";
