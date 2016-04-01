@@ -24,7 +24,7 @@ class Loan extends Eloquent {
         ->where('client_id', $client_id)
         ->where('period_id', 1)
         ->groupBy('client_id')
-        ->get();
+        ->first();
     }
 
     public static function getTotalInteresLoanClient($client_id)
