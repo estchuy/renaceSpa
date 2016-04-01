@@ -9,9 +9,16 @@ class ClientsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
-		->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
-		->get();
+		if (Input::has('nombre')) {
+			$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
+			->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
+			->whereRaw("(clients.name like ? or clients.company like ?)", array("%" . Input::get("nombre") . "%", "%" . Input::get("nombre") . "%"))  
+			->get();
+		}else{
+			$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
+			->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
+			->get();
+		}
 		$perpage = 10;
 
 		$this->layout->content = View::make('clients.index')            
@@ -31,7 +38,7 @@ class ClientsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$this->layout->content = View::make('clients.edit');
 	}
 
 
@@ -42,7 +49,39 @@ class ClientsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		if(Input::get('id') != 0){ //update client
+			
+			$p = Client::find(Input::get('id'));
+			$p->name = Input::get('nombre');
+	    	$p->email = Input::get('email');
+	    	$p->personal_id = Input::get('dpi');
+	    	$p->address = Input::get('address');
+	    	$p->phone = Input::get('phone');
+	    	if(isset(Input::get('company'))){
+	    		$p->company = Input::get('company');
+	    	}
+	    	$msg = "Cliente Actualizado!!!";
+
+	    }else{
+	    	
+	    	$p = new Client();
+	    	$p->name = Input::get('nombre');
+	    	$p->email = Input::get('email');
+	    	$p->personal_id = Input::get('dpi');
+	    	$p->address = Input::get('address');
+	    	$p->phone = Input::get('phone');
+	    	if(isset(Input::get('company'))){
+	    		$p->company = Input::get('company');
+	    	}
+	    	$msg = "Cliente Creado!!!";
+
+	    }
+    	$p->save();
+
+    	Session::flash('notification', $msg);
+		Session::flash('level', "alert alert-info");
+
+    	return Redirect::to("/clients");
 	}
 
 
@@ -70,7 +109,8 @@ class ClientsController extends \BaseController {
 		$loans = Loan::where('client_id', $id)->get();
 		$this->layout->content = View::make('clients.edit')            
 		->with('client', $client)
-		->with('loans', $loans);
+		->with('loans', $loans)
+		->with('edit', 1);
 	}
 
 
