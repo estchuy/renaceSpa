@@ -24,21 +24,27 @@
 	              <thead>
 	              <tr>
 	                  <th><i class="fa fa-user"></i> Cliente</th>
-	                  <th><i class="fa fa-bookmark"></i> Prestamo</th>
+	                  <th><i class="fa fa-bookmark"></i> # Prestamos</th>
 	                  <th><i class="fa fa-bookmark"></i> Cuotas</th>
-	                  <th><i class="fa fa-bookmark"></i> Plazo</th>
-	                  <th><i class="fa fa-bookmark"></i> Interes</th>
+	                  <th><i class="fa fa-bookmark"></i> Intere</th>
+	                  <th><i class="fa fa-bookmark"></i> Total</th>
 	                  <th></th>
 	              </tr>
 	              </thead>
 	              <tbody>
 	              @foreach($clients as $client)	
+	              <?php
+	              	$loanDetails = Loan::getLoanInfo($client_id);
+	              	$countLoans = $loanDetails->count_loan;
+	              	$totalLoans = $loanDetails->totalloan;
+	              	$totalMonth = $loanDetails->monthly_payment;
+	              ?>
 	              	<tr>
 		                <td><a href="clients/{{$client->id}}/edit">{{$client->name}}</a></td>
-		                <td>Q{{number_format($client->amnt, 2, '.', ',')}}</td>
-		                <td>Q{{number_format($client->monthly_payment, 2, '.', ',')}}</td>
-		                <td><span class="label label-info label-mini">{{$client->period_id}}</span></td>
-		                <td>{{$client->interest}}</td>
+		                <td>{{$countLoans}}</td>
+		                <td>Q{{number_format($totalMonth, 2, '.', ',')}}</td>
+		                <td>Q{{number_format(Loan::getTotalInteresLoanClient($client_id), 2, '.', ',')}}</td>
+		                <td>Q{{number_format($totalLoans, 2, '.', ',')}}</td>
 	              	</tr>
 	              	@endforeach
 	           	</tbody>
