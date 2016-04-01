@@ -13,7 +13,7 @@ class Loan extends Eloquent {
         'interest'
     );
 
-    public function getDetailLoans($parentId)
+    public static function getDetailLoans($parentId)
     {
         return Loan::where('parent_id', $parent_id)->orderBy('period_id','asc')->get();
     }
