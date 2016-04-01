@@ -15,6 +15,6 @@ class Loan extends Eloquent {
 
     public static function getDetailLoans($parentId)
     {
-        return Loan::where('parent_id', $parent_id)->orderBy('period_id','asc')->get();
+        return Loan::where('parent_id', $parentId)->orderBy('period_id','asc')->get();
     }
 }
