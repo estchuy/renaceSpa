@@ -17,5 +17,7 @@ Route::get('/', function()
 });
 
 Route::get('/clients', 'ClientsController@index');
+Route::get('/clients/new', 'ClientsController@create');
 Route::get('clients/{id}/edit', 'ClientsController@edit');
+Route::post('/client/save', 'ClientsController@store');
 Route::get('/calculoCuotas', 'ClientsController@calculoCuotas');

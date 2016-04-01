@@ -28,6 +28,16 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      .notification {
+        margin: 5% 0;
+        opacity: 0.95;
+        position: absolute;
+        right: 0;
+        width: 86%;
+        z-index: 1000;
+      }
+    </style>
   </head>
 
   <body>
@@ -42,7 +52,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Loan System</b></a>
+            <a href="/" class="logo"><b>Loan System</b></a>
             <!--logo end-->
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
@@ -65,6 +75,12 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
+            @if(Session::has('notification'))
+              <div id="notificationDiv" class="centered alert-dismissable {{Session::get(level)}}">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                <b>{{Session::get(notification)}}</b>
+              </div>
+            @endif
              @yield("content")
           </section>
       </section>
