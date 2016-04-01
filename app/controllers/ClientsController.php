@@ -17,6 +17,8 @@ class ClientsController extends \BaseController {
 		}else{
 			$clients = Client::select('clients.*', DB::raw('coalesce(loans.amnt, 0) as amnt, coalesce(loans.monthly_payment, 0) as monthly_payment, coalesce(loans.interest, "N/A") as interest, coalesce(loans.period_id, "N/A") as period_id') )
 			->leftJoin('loans', 'loans.client_id', '=', 'clients.id')
+			->groupBy('loans.parent_id')
+			->orderBy('loans.period_id', 'desc')
 			->get();
 		}
 		$perpage = 10;
@@ -106,7 +108,7 @@ class ClientsController extends \BaseController {
 	public function edit($id)
 	{
 		$client = Client::find($id);
-		$loans = Loan::where('client_id', $id)->get();
+		$loans = Loan::where('client_id', $id)->groupBy('parent_id')->get();
 		$this->layout->content = View::make('clients.edit')            
 		->with('client', $client)
 		->with('loans', $loans)

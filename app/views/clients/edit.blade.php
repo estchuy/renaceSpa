@@ -50,19 +50,19 @@
           	</div>
             <div class="form-group">
               <div style="padding-top:30px">
-                  <button type="submit" form="form1" class="btn btn-primary btn-lg btn-block" type="button"><i class="fa fa-cog"> </i> Guardar</button>
+                  <button type="submit" form="clientInfo" class="btn btn-primary btn-lg btn-block" type="button"><i class="fa fa-cog"> </i> Guardar</button>
                 </div>
             </div>
           </form>
 	      </div><!-- /content-panel -->
-        @if($edit or false)
+        @if(isset($edit))
           <!-- Resumen de Pagos -->
           <div class="form-panel">
             <div class="form-group">
               <h4 class="mb"><a onclick="javascript:switchClassi();"><i id="action" class="fa fa-angle-right"></a></i> Historial </h4>
             </div>
             <div class="form-group" id="loanHistoryDiv" style="display:none;">
-                <div class="col-md-12">
+                
                   <div class="content-panel">
                     <?php $i = 1;?>
                     @foreach($loans as $loan)
@@ -103,7 +103,6 @@
                       </table>
                       @endforeach
                   </div><!-- /content-panel -->
-              </div><!-- /col-md-12 -->
             </div>
           </div><!-- End loans history -->
         @endif
