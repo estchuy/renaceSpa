@@ -76,7 +76,7 @@
       <section id="main-content">
           <section class="wrapper">
             @if(Session::has('notification'))
-              <div id="notificationDiv" class="centered alert-dismissable {{Session::get(level)}}">
+              <div id="notificationDiv" class="centered alert-dismissable {{Session::get('level', 'alert-success')}}">
                 <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
                 <b>{{Session::get(notification)}}</b>
               </div>
