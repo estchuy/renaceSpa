@@ -101,6 +101,7 @@
                             @endforeach
                         </tbody>
                       </table>
+                      <?php $i++;?>
                       @endforeach
                   </div><!-- /content-panel -->
             </div>
