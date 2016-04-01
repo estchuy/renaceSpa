@@ -34,7 +34,7 @@
 	              <tbody>
 	              @foreach($clients as $client)	
 	              <?php
-	              	$loanDetails = Loan::getLoanInfo($client_id);
+	              	$loanDetails = Loan::getLoanInfo($client->id);
 	              	$countLoans = $loanDetails->count_loan;
 	              	$totalLoans = $loanDetails->totalloan;
 	              	$totalMonth = $loanDetails->monthly_payment;
@@ -43,7 +43,7 @@
 		                <td><a href="clients/{{$client->id}}/edit">{{$client->name}}</a></td>
 		                <td>{{$countLoans}}</td>
 		                <td>Q{{number_format($totalMonth, 2, '.', ',')}}</td>
-		                <td>Q{{number_format(Loan::getTotalInteresLoanClient($client_id), 2, '.', ',')}}</td>
+		                <td>Q{{number_format(Loan::getTotalInteresLoanClient($client->id), 2, '.', ',')}}</td>
 		                <td>Q{{number_format($totalLoans, 2, '.', ',')}}</td>
 	              	</tr>
 	              	@endforeach
