@@ -21,3 +21,6 @@ Route::get('/clients/new', 'ClientsController@create');
 Route::get('clients/{id}/edit', 'ClientsController@edit');
 Route::post('/client/save', 'ClientsController@store');
 Route::get('/calculoCuotas', 'ClientsController@calculoCuotas');
+
+Route::get('/loan/{id}/new', 'LoansController@create');
+Route::post('/loan/save', 'LoansController@store');
