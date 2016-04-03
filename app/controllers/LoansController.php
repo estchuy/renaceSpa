@@ -42,8 +42,8 @@ class LoansController extends \BaseController {
   			$p->monthly_payment = $cuota['cuotaMensual'];
   			$p->interest = Input::get('interesGlobal');
   			$p->interest_fee = $cuota['interes'];
-  			$p->capital = $cuota['capitalMes']
-  			$p->balance = $cuota['capital']
+  			$p->capital = $cuota['capitalMes'];
+  			$p->balance = $cuota['capital'];
   			if($period_id > 1){
   				$p->parent_id = $parent_id;
   			}
@@ -53,7 +53,7 @@ class LoansController extends \BaseController {
   			if($period_id == 1){
   				$parent_id = $p->id;
 
-  				$p->parent_id = $p->id
+  				$p->parent_id = $p->id;
   				$p->save();
   			}
 		}
