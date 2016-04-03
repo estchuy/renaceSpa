@@ -20,7 +20,7 @@ class Loan extends Eloquent {
 
     public static function getLoanInfo($client_id)
     {
-        return Loan::select(DB::raw('count(period_id) as `count_loan`', 'sum(amnt) as `totalLoan`', 'sum(monthly_payment) as `monthly_payment`'))
+        return Loan::select(DB::raw('count(period_id) as `count_loan`, sum(amnt) as `totalLoan`, sum(monthly_payment) as `monthly_payment`'))
         ->where('client_id', $client_id)
         ->where('period_id', 1)
         ->groupBy('client_id')
