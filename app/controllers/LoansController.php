@@ -18,9 +18,12 @@ class LoansController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function create($id)
 	{
-		//
+		$client = Client::find($id);
+		
+		$this->layout->content = View::make('loans.create')            
+		->with('client', $client);
 	}
 
 
@@ -31,7 +34,29 @@ class LoansController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		foreach(Input::get('cuotas') as $period_id => $cuota){
+			$p = new Loan();
+			$p->client_id = Input::get('client_id');
+  			$p->amnt = Input::get('amnt');
+  			$p->period_id = $period_id;
+  			$p->monthly_payment = $cuota['cuotaMensual'];
+  			$p->interest = Input::get('interesGlobal');
+  			$p->interest_fee = $cuota['interes'];
+  			$p->capital = $cuota['capitalMes']
+  			$p->balance = $cuota['capital']
+  			if($period_id > 1){
+  				$p->parent_id = $parent_id;
+  			}
+  			$p->pay = 0;
+
+  			$p->save();
+  			if($period_id == 1){
+  				$parent_id = $p->id;
+
+  				$p->parent_id = $p->id
+  				$p->save();
+  			}
+		}
 	}
 
 

@@ -24,7 +24,7 @@
 	              <thead>
 	              <tr>
 	                  <th><i class="fa fa-user"></i> Cliente</th>
-	                  <th><i class="fa fa-bookmark"></i> # Prestamos</th>
+	                  <th><i class="fa fa-bookmark"></i> Prestamos</th>
 	                  <th><i class="fa fa-bookmark"></i> Cuotas</th>
 	                  <th><i class="fa fa-bookmark"></i> Intere</th>
 	                  <th><i class="fa fa-bookmark"></i> Total</th>
@@ -40,7 +40,7 @@
 	              	$totalMonth = 0;
 	              	if(isset($loanDetails->count_loan)){
 		              	$countLoans = $loanDetails->count_loan;
-		              	$totalLoans = $loanDetails->totalloan;
+		              	$totalLoans = $loanDetails->totalLoan;
 		              	$totalMonth = $loanDetails->monthly_payment;
 		            }
 	              ?>
@@ -50,6 +50,7 @@
 		                <td>Q{{number_format($totalMonth, 2, '.', ',')}}</td>
 		                <td>Q{{number_format(Loan::getTotalInteresLoanClient($client->id), 2, '.', ',')}}</td>
 		                <td>Q{{number_format($totalLoans, 2, '.', ',')}}</td>
+		                <td><button class="btn btn-primary btn-sm" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button></td>
 	              	</tr>
 	              	@endforeach
 	           	</tbody>
