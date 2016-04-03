@@ -39,10 +39,10 @@
 
       headerTableHtml += '<tr><td>'+ii;
       //hidden values
-      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][\'cuotaMensual\']" name="cuotas['+ii+'][\'cuotaMensual\']" value='+cuotaMensual+' />';
-      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][\'interes\']" name="cuotas['+ii+'][\'interes\']" value='+interes+' />';
-      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][\'capitalMes\']" name="cuotas['+ii+'][\'capitalMes\']" value='+capitalMes+' />';
-      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][\'capital\']" name="cuotas['+ii+'][\'capital\']" value='+capital+' />';
+      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][cuotaMensual]" name="cuotas['+ii+'][cuotaMensual]" value='+cuotaMensual+' />';
+      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][interes]" name="cuotas['+ii+'][interes]" value='+interes+' />';
+      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][capitalMes]" name="cuotas['+ii+'][capitalMes]" value='+capitalMes+' />';
+      headerTableHtml += '<input type="hidden" id="cuotas['+ii+'][capital]" name="cuotas['+ii+'][capital]" value='+capital+' />';
       headerTableHtml += '</td><td>Q '+cuotaMensual+'</td><td>Q '+interes+'</td><td>Q '+capitalMes+'</td><td>Q '+capital+'</td></tr>';
     }
     interesTotal = interesTotal.toFixed(2);
