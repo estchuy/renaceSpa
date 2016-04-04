@@ -4,8 +4,10 @@
     div = document.getElementById('loanHistoryDiv').style.display;
     if(div == 'none'){
       document.getElementById('loanHistoryDiv').style.display = 'block';
+      document.getElementById('buttonHistorico').text = '<i class="fa fa-chevron-circle-up"></i> Ocultar';
     }else{
       document.getElementById('loanHistoryDiv').style.display = 'none';
+      document.getElementById('buttonHistorico').text = '<i class="fa fa-chevron-circle-down"></i> Mostrar';
     }
   }
 </script>
@@ -66,7 +68,9 @@
             <!-- Resumen de Pagos -->
             <div class="form-panel">
               <div class="form-group">
-                <h4 class="mb"><a onclick="javascript:switchClassi();"><i id="action" class="fa fa-angle-right"></a></i> Historial </h4>
+                <h4 class="mb"> Historial </h4>
+                <button id="buttonHistorico" class="btn btn-theme" type="button" onclick="javascript:switchClassi();"><i class="fa fa-chevron-circle-down"></i> Mostrar</button>
+                <button class="btn btn-primary btn-lg" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
               </div>
               <div class="form-group" id="loanHistoryDiv" style="display:none;">
                   
