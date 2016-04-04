@@ -114,12 +114,42 @@ class LoansController extends \BaseController {
 
 	public function consolidado()
 	{
-		//
+		$loans = Loans::where('pay', 0)
+		->groupBy('parent_id')
+		->get();
+
+		$totalMontly = 0;
+		$totalInteres = 0;
+		$totalCapital = 0;
+		$i = 0;
+
+		foreach ($loans => $loan) {
+			$totalMontly = $totalMontly + $loan->monthly_payment;
+			$totalInteres = $totalInteres + $loan->interest_fee;
+			$totalCapital = $totalCapital + $loan->capital;
+			$i++;
+		}
+
+		$this->layout->content = View::make('loans.consolidado')            
+		->with('totalMontly', $totalMontly)
+		->with('totalInteres', $totalInteres)
+		->with('totalCapital', $totalCapital)
+		->with('totalLoans', $i);
+
 	}
 
 	public function detallado()
 	{
-		//
+		$loans = Loans::select('loans.*', 'clients.name')
+		->join('clients', 'clients.id', '=', 'Loans.client_id')
+		->where('loans.pay', 0)
+		->groupBy('loans.parent_id')
+		->orderBy('clients.name', 'asc')
+		->orderBy('loans.parent_id', 'asc')
+		->get();
+
+		$this->layout->content = View::make('loans.detallado')            
+		->with('loans', $loans);
 	}
 
 	public function periodo()
