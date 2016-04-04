@@ -24,10 +24,10 @@
 	              <thead>
 	              <tr>
 	                  <th><i class="fa fa-user"></i> Cliente</th>
-	                  <th><i class="fa fa-bookmark"></i> Prestamos</th>
-	                  <th><i class="fa fa-bookmark"></i> Cuotas</th>
-	                  <th><i class="fa fa-bookmark"></i> Intere</th>
-	                  <th><i class="fa fa-bookmark"></i> Total</th>
+	                  <th><i class="fa fa-sort-numeric-asc"></i> Prestamos</th>
+	                  <th><i class="fa fa-th"></i> Cuotas</th>
+	                  <th><i class="fa fa-external-link"></i> Intere</th>
+	                  <th><i class="fa fa-money"></i> Total</th>
 	                  <th></th>
 	              </tr>
 	              </thead>

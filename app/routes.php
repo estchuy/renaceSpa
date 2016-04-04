@@ -15,12 +15,16 @@ Route::get('/', function()
 {
 	return View::make('layout.content');
 });
-
+//Clientes
 Route::get('/clients', 'ClientsController@index');
+Route::get('/calculoCuotas', 'ClientsController@calculoCuotas');
 Route::get('/clients/new', 'ClientsController@create');
 Route::get('clients/{id}/edit', 'ClientsController@edit');
 Route::post('/client/save', 'ClientsController@store');
-Route::get('/calculoCuotas', 'ClientsController@calculoCuotas');
-
+//Prestamos
 Route::get('/loan/{id}/new', 'LoansController@create');
 Route::post('/loan/save', 'LoansController@store');
+//Reportes
+Route::get('/reporte/consolidado', 'LoansController@consolidado');
+Route::get('/reporte/detallado', 'LoansController@detallado');
+Route::get('/reporte/periodo', 'LoansController@periodo');
