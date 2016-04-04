@@ -7,15 +7,26 @@
               	  <h5 class="centered">DYSCHUY</h5>
 		              <li class="mt">
                       <a href="/clients">
-                          <i class="fa fa-dashboard"></i>
+                          <i class="fa fa-users"></i>
                           <span>Clients</span>
                       </a>
                   </li>
-                  <li class="mt">
+                  <li>
                       <a href="/calculoCuotas">
-                          <i class="fa fa-dashboard"></i>
+                          <i class="fa fa-calculator"></i>
                           <span>Calculo de Cuotas</span>
                       </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-file-text"></i>
+                          <span>Reportes</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="/consolidado">Consolidado</a></li>
+                          <li><a  href="/detallado">Detallado</a></li>
+                          <li><a  href="/periodo">Por Periodo</a></li>
+                      </ul>
                   </li>
               </ul>
               <!-- sidebar menu end-->
