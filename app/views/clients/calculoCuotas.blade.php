@@ -44,7 +44,7 @@
 	<h3>
 		Calculo de Cuotas
 	</h3>
-	<div class="row mt">
+	<div class="row">
 	  <div class="col-md-12">
 	      <div class="form-panel">
 	          <div class="form-group">

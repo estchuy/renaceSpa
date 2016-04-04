@@ -1,6 +1,6 @@
 @section('content')
 <section class="wrapper">
-	<div class="row mt">
+	<div class="row">
 	  <div class="col-md-12">
 	      <div class="content-panel">
 	          <table class="table table-striped table-advance table-hover">
