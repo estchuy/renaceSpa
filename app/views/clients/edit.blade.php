@@ -17,8 +17,8 @@
 	</h3>
 	<div class="row mt">
 	  <div class="col-md-12">
-	      <div class="form-panel">
-          <form method="post" class="form-horizontal tasi-form" id="clientInfo" action="/client/save">
+      <form method="post" class="form-horizontal tasi-form" id="clientInfo" action="/client/save">
+	       <div class="form-panel">
   	        <div class="form-group">
                 	<label class="col-sm-1 col-sm-2 control-label">Nombre</label>
                  	<div class="col-sm-5">
@@ -55,8 +55,8 @@
                   <button type="submit" form="clientInfo" class="btn btn-primary btn-lg btn-block" type="button"><i class="fa fa-cog"> </i> Guardar</button>
                 </div>
             </div>
-          </form>
-	      </div><!-- /content-panel -->
+          </div><!-- /content-panel -->
+        </form>
         @if(isset($edit))
           @if(count($loans) == 0)
             <div class="form-panel">

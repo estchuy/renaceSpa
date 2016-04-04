@@ -13,7 +13,7 @@
                   </li>
                   <li>
                       <a href="/calculoCuotas">
-                          <i class="fa fa-calculator"></i>
+                          <i class="fa fa-th-large"></i>
                           <span>Calculo de Cuotas</span>
                       </a>
                   </li>
