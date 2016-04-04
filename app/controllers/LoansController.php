@@ -57,6 +57,11 @@ class LoansController extends \BaseController {
   				$p->save();
   			}
 		}
+
+		Session::flash('notification', 'Prestamo creado y asociado a Cliente');
+		Session::flash('level', "alert alert-info");
+
+    	return Redirect::to("/clients");
 	}
 
 
@@ -103,6 +108,21 @@ class LoansController extends \BaseController {
 	 * @return Response
 	 */
 	public function destroy($id)
+	{
+		//
+	}
+
+	public function consolidado()
+	{
+		//
+	}
+
+	public function detallado()
+	{
+		//
+	}
+
+	public function periodo()
 	{
 		//
 	}
