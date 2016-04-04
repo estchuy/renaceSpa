@@ -4,10 +4,10 @@
     div = document.getElementById('loanHistoryDiv').style.display;
     if(div == 'none'){
       document.getElementById('loanHistoryDiv').style.display = 'block';
-      document.getElementById('buttonHistorico').value = '<i class="fa fa-chevron-circle-up"></i> Ocultar';
+      document.getElementById('buttonHistorico').textContent = '<i class="fa fa-chevron-circle-up"></i> Ocultar';
     }else{
       document.getElementById('loanHistoryDiv').style.display = 'none';
-      document.getElementById('buttonHistorico').value = '<i class="fa fa-chevron-circle-down"></i> Mostrar';
+      document.getElementById('buttonHistorico').textContent = '<i class="fa fa-chevron-circle-down"></i> Mostrar';
     }
   }
 </script>
