@@ -23,9 +23,9 @@
                           <span>Reportes</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="/consolidado">Consolidado</a></li>
-                          <li><a  href="/detallado">Detallado</a></li>
-                          <li><a  href="/periodo">Por Periodo</a></li>
+                          <li><a  href="/reporte/consolidado">Consolidado</a></li>
+                          <li><a  href="/reporte/detallado">Detallado</a></li>
+                          <li><a  href="/reporte/periodo">Por Periodo</a></li>
                       </ul>
                   </li>
               </ul>
