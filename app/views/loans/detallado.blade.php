@@ -23,7 +23,7 @@
 	              <tbody>
 	              @foreach($loans as $loan)	
 	              	<tr>
-		                <td><a href="clients/{{$client->id}}/edit">{{$loan->name}}</a></td>
+		                <td>{{$loan->name}}</td>
 		                <td>{{$loan->period_id."/".$loan->total_of_periods}}</td>
 		                <td>Q{{number_format($loan->monthly_payment, 2, '.', ',')}}</td>
 	              	</tr>
