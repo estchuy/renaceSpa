@@ -1,17 +1,17 @@
 @section('content')
 <section class="wrapper">
 	<div class="row">
-	  <div class="col-md-12">
+		<div class="col-md-3"></div>
+	  <div class="col-md-6">
 	      <div class="content-panel">
+	      	<div class="form-group">
+		       	<label class="col-sm-5 control-label"><h4><i class="fa fa-users"></i> Reporte Detallado</h4></label>
+	            <div class="col-sm-12">
+	             	<hr>
+	            </div>
+			</div>
+			<div class="col-sm-12">
 	          <table class="table table-striped table-advance table-hover">
-	          	
-		      	 	<div class="form-group">
-				       	<label class="col-sm-2 control-label"><h4><i class="fa fa-users"></i> Reporte Detallado</h4></label>
-			            <div class="col-sm-12">
-			             	<hr>
-			            </div>
-	  				</div>
-  				
 	              <thead>
 	              <tr>
 	                  <th><i class="fa fa-user"></i> Cliente</th>
@@ -30,8 +30,10 @@
 	              	@endforeach
 	           	</tbody>
 	          </table>
+	         </div>
 	      </div><!-- /content-panel -->
-	  </div><!-- /col-md-12 -->
+	  </div><!-- /col-md-6 -->
+	  <div class="col-md-3"></div>
 	</div><!-- /row -->
 </section>
 @stop
