@@ -29,29 +29,29 @@
 	  </div><!-- /col-md-4 -->
 	  <div class="col-md-4"></div>
 	</div><!-- /row -->
-	<div class="row">
+	<div class="row mt">
 		<div class="col-md-4"></div>
 		<div class="col-md-4">
-			<div class="content-panel">
-				<div class="col-md-2">
+			
+				<div class="col-md-3">
 					<form method="post" id="download" action="/reporte/download">
 						<input type="hidden" id="action" name="action" value="consolidado">
-						<button class="btn btn-warning" type="button" type="submit" form="download">
+						<button class="btn btn-warning" type="submit" form="download">
 							<i class="fa fa-download"></i>
 							PDF
 						</button>
 					</form>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-3">
 					<form method="post" id="aplicarPago" action="/reporte/apply">
 						<input type="hidden" id="action" name="action" value="consolidado">
-						<button class="btn btn-warning" type="button" type="submit" form="aplicarPago">
+						<button class="btn btn-success" type="submit" form="aplicarPago">
 							<i class="fa fa-sign-out"></i>
 							Aplicar Pago
 						</button>
 					</form>
 				</div>
-			</div>
+			
 		</div>
 		<div class="col-md-4"></div>
 	</div>
