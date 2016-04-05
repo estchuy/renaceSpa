@@ -35,7 +35,7 @@
 	           	<thead>
 	           		<tr>
 	           			<th colspan="2"><strong>Total</strong></th>
-	           			<th><h3><strong>Q{{number_format($totalPay, 2, '.', ',')}}</strong></h3></th>
+	           			<th><strong>Q{{number_format($totalPay, 2, '.', ',')}}</strong></th>
 	           		</tr>
 	           	</thead>
 	          </table>
@@ -43,5 +43,32 @@
 	  </div><!-- /col-md-6 -->
 	  <div class="col-md-3"></div>
 	</div><!-- /row -->
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="content-panel">
+				<div class="col-md-2">
+					<form method="post" id="download" action="/reporte/download">
+						<input type="hidden" id="action" name="action" value="detallado">
+						<button class="btn btn-warning" type="button" type="submit" form="download">
+							<i class="fa fa-download"></i>
+							PDF
+						</button>
+					</form>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-2">
+					<form method="post" id="aplicarPago" action="/reporte/apply">
+						<input type="hidden" id="action" name="action" value="detallado">
+						<button class="btn btn-warning" type="button" type="submit" form="aplicarPago">
+							<i class="fa fa-sign-out"></i>
+							Aplicar Pago
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3"></div>
+	</div>
 </section>
 @stop

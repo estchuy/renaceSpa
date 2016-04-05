@@ -130,7 +130,7 @@ class LoansController extends \BaseController {
 			$totalCapital = $totalCapital + $loan->capital;
 			$i++;
 		}
-
+		
 		$this->layout->content = View::make('loans.consolidado')            
 		->with('totalMontly', $totalMontly)
 		->with('totalInteres', $totalInteres)
@@ -158,5 +158,58 @@ class LoansController extends \BaseController {
 		//
 	}
 
+	public function applyPayment(){
+
+	}
+
+	public function history(){
+
+	}
+
+	public function download(){
+		$optionsMpdf[0] = 0;
+		$optionsMpdf[1] = 1;
+	 	//if you want a different option from default
+		//$optionsMpdf[2] = 'left text, center text, right text'
+		if(Input::get('action') == 'consolidado'){
+			$loans = Loan::where('pay', 0)
+			->groupBy('parent_id')
+			->get();
+
+			$totalMontly = 0;
+			$totalInteres = 0;
+			$totalCapital = 0;
+			$i = 0;
+
+			foreach ($loans as $loan) {
+				$totalMontly = $totalMontly + $loan->monthly_payment;
+				$totalInteres = $totalInteres + $loan->interest_fee;
+				$totalCapital = $totalCapital + $loan->capital;
+				$i++;
+			}
+			$view = View::make('loans.consolidado')            
+			->with('totalMontly', $totalMontly)
+			->with('totalInteres', $totalInteres)
+			->with('totalCapital', $totalCapital)
+			->with('totalLoans', $i);
+			$html = $view->render();
+			$name = "Consolidado_".date('Y_m_d');
+		}elseif (Input::get('action') == 'detallado') {
+			$loans = Loan::select('loans.*', 'clients.name')
+			->join('clients', 'clients.id', '=', 'loans.client_id')
+			->where('loans.pay', 0)
+			->groupBy('loans.parent_id')
+			->orderBy('clients.name', 'asc')
+			->orderBy('loans.parent_id', 'asc')
+			->get();
+
+			$view = View::make('loans.detallado')            
+			->with('loans', $loans);
+			$html = $view->render();
+			$name = "Detallado_".date('Y_m_d');
+		}
+
+		PDFcreate::createPDF($html, $optionsMpdf, $name);
+	}
 
 }

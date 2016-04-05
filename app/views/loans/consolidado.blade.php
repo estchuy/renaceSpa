@@ -20,8 +20,8 @@
 	              </thead>
 	              <tbody>
 	              	<tr>
-		                <td style="padding-left:60px">{{$totalLoans}}</td>
-		                <td><h3><strong>Q{{number_format($totalMontly, 2, '.', ',')}}</strong></h3></td>
+		                <td style="padding-left:60px"><h4>{{$totalLoans}}</h4></td>
+		                <td><h4><strong>Q{{number_format($totalMontly, 2, '.', ',')}}</strong></h4></td>
 	              	</tr>
 	           	</tbody>
 	          </table>
@@ -29,5 +29,31 @@
 	  </div><!-- /col-md-4 -->
 	  <div class="col-md-4"></div>
 	</div><!-- /row -->
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div class="content-panel">
+				<div class="col-md-2">
+					<form method="post" id="download" action="/reporte/download">
+						<input type="hidden" id="action" name="action" value="consolidado">
+						<button class="btn btn-warning" type="button" type="submit" form="download">
+							<i class="fa fa-download"></i>
+							PDF
+						</button>
+					</form>
+				</div>
+				<div class="col-md-2">
+					<form method="post" id="aplicarPago" action="/reporte/apply">
+						<input type="hidden" id="action" name="action" value="consolidado">
+						<button class="btn btn-warning" type="button" type="submit" form="aplicarPago">
+							<i class="fa fa-sign-out"></i>
+							Aplicar Pago
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
 </section>
 @stop
