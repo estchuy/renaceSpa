@@ -21,16 +21,14 @@ class PDFcreate extends Eloquent
 	 	$optionsMpdf[6] = url to generate external PDF
 	 	$optionsMpdf[7] = first page header added from new PDF
 	 	$optionsMpdf[8] = Change margin to page = "1,2,3,4,5,6"
-	$path => path of the view to put inside the html, or the URL. This just work for wkhtml2pdf.
 	$name => PDF file name
-	$viewValues => this is an array, this work just for wkhtml2pdf if the view require values to display some information
 	*/
-	public static function createPDF( $html, $optionsMpdf, $path, $name, $viewValues){
+	public static function createPDF( $html, $optionsMpdf, $name){
 		$size_page = "LETTER";
 		$letterSize = "16px";
 		$setfooter = false;
 		$left = "Loan System";
-		$center = "";
+		$center = "dysChuy";
 		$right = "Page {PAGENO}/{nb}";
 		if(count($optionsMpdf) > 0){
 			$i = 0;
@@ -146,7 +144,7 @@ class PDFcreate extends Eloquent
 				unlink($optionsMpdf[5]);
 			}
 		}
-		$mpdf->Output($pdfFileName, 'F');
+		$mpdf->Output($pdfFileName, 'D');
 		}
 	}		
 }
