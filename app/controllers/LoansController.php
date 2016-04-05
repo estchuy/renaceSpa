@@ -48,6 +48,7 @@ class LoansController extends \BaseController {
   				$p->parent_id = $parent_id;
   			}
   			$p->pay = 0;
+  			$p->total_of_periods = Input::get('cantidadCuotas');
 
   			$p->save();
   			if($period_id == 1){
@@ -123,7 +124,7 @@ class LoansController extends \BaseController {
 		$totalCapital = 0;
 		$i = 0;
 
-		foreach ($loans => $loan) {
+		foreach ($loans as $loan) {
 			$totalMontly = $totalMontly + $loan->monthly_payment;
 			$totalInteres = $totalInteres + $loan->interest_fee;
 			$totalCapital = $totalCapital + $loan->capital;
