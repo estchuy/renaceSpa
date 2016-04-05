@@ -36,6 +36,7 @@
         capital = (0).toFixed(2);
       }
 
+      interes = interes.toFixed(2);
       ii++;
 
       headerTableHtml += '<tr><td>'+ii;
