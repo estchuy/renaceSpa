@@ -15,6 +15,7 @@
     headerTableHtml += '<input type="hidden" id="client_id" name="client_id" value='+client_id+' />';
     headerTableHtml += '<input type="hidden" id="amnt" name="amnt" value='+c+' />';
     headerTableHtml += '<input type="hidden" id="interesGlobal" name="interesGlobal" value='+i+' />';
+    headerTableHtml += '<input type="hidden" id="cantidadCuotas" name="cantidadCuotas" value='+p+' />';
     headerTableHtml += '<button class="btn btn-round btn-success" type="submit" form="clientLoan">Crear</button>';
     headerTableHtml += ' <table class="table table-hover"><thead><tr><th>#</th><th>Cuota Nivelada</th><th>Intereses</th><th>Capital</th><th>Saldo</th></tr></thead><tbody>';
     capital = c;
