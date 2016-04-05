@@ -24,7 +24,10 @@ Route::post('/client/save', 'ClientsController@store');
 //Prestamos
 Route::get('/loan/{id}/new', 'LoansController@create');
 Route::post('/loan/save', 'LoansController@store');
+Route::get('/loan/apply', 'LoansController@applyPayment');
+Route::get('/loan/historico', 'LoansController@history');
 //Reportes
 Route::get('/reporte/consolidado', 'LoansController@consolidado');
 Route::get('/reporte/detallado', 'LoansController@detallado');
 Route::get('/reporte/periodo', 'LoansController@periodo');
+Route::post('/reporte/download', 'LoansController@download');
