@@ -145,7 +145,6 @@ class PDFcreate extends Eloquent
 			}
 		}
 		$mpdf->Output($pdfFileName, 'D');
-		}
 	}		
 }
 	
