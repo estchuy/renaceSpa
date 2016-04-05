@@ -61,7 +61,7 @@
           @if(count($loans) == 0)
             <div class="form-panel">
               <div class="form-group">
-                <button class="btn btn-primary btn-lg" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
+                <button class="btn btn-theme03" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
               </div>
             </div>
           @else
@@ -70,7 +70,7 @@
               <div class="form-group">
                 <h4 class="mb"> Historial </h4>
                 <button id="buttonHistorico" class="btn btn-theme" type="button" onclick="javascript:switchClassi();"><i class="fa fa-chevron-circle-down"></i> Mostrar</button>
-                <button class="btn btn-primary btn-lg" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
+                <button class="btn btn-theme03" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
               </div>
               <div class="form-group" id="loanHistoryDiv" style="display:none;">
                   
