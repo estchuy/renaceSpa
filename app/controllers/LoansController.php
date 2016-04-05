@@ -142,7 +142,7 @@ class LoansController extends \BaseController {
 	public function detallado()
 	{
 		$loans = Loan::select('loans.*', 'clients.name')
-		->join('clients', 'clients.id', '=', 'Loans.client_id')
+		->join('clients', 'clients.id', '=', 'loans.client_id')
 		->where('loans.pay', 0)
 		->groupBy('loans.parent_id')
 		->orderBy('clients.name', 'asc')
