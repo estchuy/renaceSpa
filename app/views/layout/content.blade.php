@@ -107,28 +107,6 @@
     <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/sparkline-chart.js"></script>    
 	<script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/zabuto_calendar.js"></script>	
 	
-	<script type="text/javascript">
-    //mensaje de alerta
-       $(document).ready(function () {
-        var unique_id = $.gritter.add({
-            // (string | mandatory) the heading of the notification
-            title: 'Loan System',
-            // (string | mandatory) the text inside the notification
-            text: 'CHUY DYSCHUY',
-            // (string | optional) the image to display on the left
-            image: 'http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/img/dysCHUY.jpg',
-            // (bool | optional) if you want it to fade out on its own or just sit there
-            sticky: true,
-            // (int | optional) the time you want it to be alive for before fading out
-            time: '',
-            // (string | optional) the class name you want to apply to that specific message
-            class_name: 'my-sticky-class'
-        });
-
-        return false;
-        });
-	</script>
-	
 	<script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
