@@ -22,7 +22,7 @@
 	              <tbody>
 	              	<tr>
 		                <td>{{$totalLoans}}</td>
-		                <td>Q{{number_format($monthly_payment, 2, '.', ',')}}</td>
+		                <td>Q{{number_format($totalMontly, 2, '.', ',')}}</td>
 	              	</tr>
 	           	</tbody>
 	          </table>
