@@ -115,7 +115,7 @@ class LoansController extends \BaseController {
 
 	public function consolidado()
 	{
-		$loans = Loans::where('pay', 0)
+		$loans = Loan::where('pay', 0)
 		->groupBy('parent_id')
 		->get();
 
@@ -141,7 +141,7 @@ class LoansController extends \BaseController {
 
 	public function detallado()
 	{
-		$loans = Loans::select('loans.*', 'clients.name')
+		$loans = Loan::select('loans.*', 'clients.name')
 		->join('clients', 'clients.id', '=', 'Loans.client_id')
 		->where('loans.pay', 0)
 		->groupBy('loans.parent_id')
