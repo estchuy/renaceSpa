@@ -44,7 +44,7 @@
 				</div>
 				<div class="col-md-2">
 					<form method="post" id="aplicarPago" action="/reporte/apply">
-						<input type="hidden" id="action" name="action" value="detallado">
+						<input type="hidden" id="action" name="action" value="consolidado">
 						<button class="btn btn-warning" type="button" type="submit" form="aplicarPago">
 							<i class="fa fa-sign-out"></i>
 							Aplicar Pago
