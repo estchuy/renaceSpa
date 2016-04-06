@@ -160,10 +160,62 @@ class LoansController extends \BaseController {
 
 	public function applyPayment(){
 
+		$paymentNumber = 1;
+
+		$number = PayLoan::groupBy('paymentNumber')
+		->orderBy('paymentNumber', 'desc')
+		->first();
+
+		if(count($number) > 0){
+			$paymentNumber = $number->paymentNumber+1;
+		}
+
+		if(Input::get('action') == 'consolidado'){
+			$loans = Loan::select('loans.*')
+			->where('loans.pay', 0)
+			->groupBy('loans.parent_id')
+			->orderBy('loans.parent_id', 'asc')
+			->get();
+
+			foreach ($loans as $loan) {
+
+				$pLoan = Loan::find($loan->id);
+				$pLoan->pay = 1;
+				$pLoan->save();
+
+				$p = new PayLoan();
+				$p->loan_id = $loan->id;
+				$p->paymentNumber = $paymentNumber;
+				$p->save();
+			}
+		}else{
+			$i = 0;
+			while($i < Input::get('total_Loans')){
+				if(Input::get($i) !== null ){
+					$pLoan = Loan::find(Input::get('loan_id_'.$i));
+					$pLoan->pay = 1;
+					$pLoan->save();
+
+					$p = new PayLoan();
+					$p->loan_id = $pLoan->id;
+					$p->paymentNumber = $paymentNumber;
+					$p->save();
+				}
+			}
+		}
+
+		Session::flash('notification', 'Pago Aplicado Correctamente');
+		Session::flash('level', "alert alert-success");
+
+    	return Redirect::to("/historico");
 	}
 
 	public function history(){
+		$history = PayLoan::groupBy('paymentNumber')
+		->get();
 
+		$this->layout->content = View::make('loans.history')            
+		->with('history', $history);
 	}
 
 	public function download(){
@@ -187,6 +239,26 @@ class LoansController extends \BaseController {
 				$totalCapital = $totalCapital + $loan->capital;
 				$i++;
 			}
+			$html = '<table border="0">
+	          			<tr>
+	          				<th colspan="2" align="center">
+	          					<h4>Reporte Consolidado</h4>
+	          				</th>
+	          			</tr>
+	          			<tr>
+	          				<td colspan="2">
+	          					<hr>
+	          				</td>
+	          			</tr>
+			            <tr>
+			              	<th> Total Prestamos</th>
+			               	<th> Monto</th>
+			            </tr>
+			            <tr>
+				          	<td style="padding-left:60px"><h4>'.$i'.</h4></td>
+				         	<td><h4><strong>Q'.number_format($totalMontly, 2, '.', ',')'.</strong></h4></td>
+			            </tr>
+			        </table>';
 			$name = "Consolidado_".date('Y_m_d');
 		}elseif (Input::get('action') == 'detallado') {
 			$loans = Loan::select('loans.*', 'clients.name')
@@ -196,6 +268,44 @@ class LoansController extends \BaseController {
 			->orderBy('clients.name', 'asc')
 			->orderBy('loans.parent_id', 'asc')
 			->get();
+
+			$html = '<table border="0">
+							<tr>
+		          				<th colspan="4" align="center">
+		          					<h4>Reporte Detallado</h4>
+		          				</th>
+		          			</tr>
+		          			<tr>
+		          				<td colspan="4">
+		          					<hr>
+		          				</td>
+		          			</tr>
+		              		<tr>
+		              			<th>#</th>
+		                  		<th>Cliente</th>
+		                  		<th>Cuota</th>
+		                  		<th>Monto</th>
+		              		</tr>';
+		   	$i = 1;
+		   	$totalPay = 0;
+			foreach ($loans as $loan) {
+				$html .= '<tr>
+							<td>'.$i.'</td>
+			                <td>'.$loan->name.'</td>
+			                <td>'.$loan->period_id.'/'.$loan->total_of_periods.'</td>
+			                <td>Q'.number_format($loan->monthly_payment, 2, '.', ',').'</td>
+		              	</tr>';
+		      	$i++;
+		      	$totalPay = $totalPay + $loan->monthly_payment;
+			}
+
+			$html .= '<thead>
+		           		<tr>
+		           			<th colspan="3"><strong>Total</strong></th>
+		           			<th><strong>Q'.number_format($totalPay, 2, '.', ',').'</strong></th>
+		           		</tr>
+		           	</thead>
+		          </table>';
 			$name = "Detallado_".date('Y_m_d');
 		}
 
