@@ -187,12 +187,6 @@ class LoansController extends \BaseController {
 				$totalCapital = $totalCapital + $loan->capital;
 				$i++;
 			}
-			$view = View::make('loans.consolidado')            
-			->with('totalMontly', $totalMontly)
-			->with('totalInteres', $totalInteres)
-			->with('totalCapital', $totalCapital)
-			->with('totalLoans', $i);
-			$html = $view->render();
 			$name = "Consolidado_".date('Y_m_d');
 		}elseif (Input::get('action') == 'detallado') {
 			$loans = Loan::select('loans.*', 'clients.name')
@@ -202,10 +196,6 @@ class LoansController extends \BaseController {
 			->orderBy('clients.name', 'asc')
 			->orderBy('loans.parent_id', 'asc')
 			->get();
-
-			$view = View::make('loans.detallado')            
-			->with('loans', $loans);
-			$html = $view->render();
 			$name = "Detallado_".date('Y_m_d');
 		}
 
