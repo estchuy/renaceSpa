@@ -63,6 +63,7 @@
 		           		<tr>
 		           			<th colspan="2"><strong>Total</strong></th>
 		           			<th><strong>Q{{number_format($totalPay, 2, '.', ',')}}</strong></th>
+		           			<th></th>
 		           		</tr>
 		           	</thead>
 		          </table>
