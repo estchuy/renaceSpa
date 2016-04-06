@@ -15,7 +15,6 @@
 	              <tr>
 	                  <th><i class="fa fa-sort-numeric-asc"></i> Total Prestamos</th>
 	                  <th><i class="fa fa-money"></i> Monto</th>
-	                  <th></th>
 	              </tr>
 	              </thead>
 	              <tbody>
