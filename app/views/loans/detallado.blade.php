@@ -51,7 +51,10 @@
 			                <td>{{$loan->name}}</td>
 			                <td>{{$loan->period_id."/".$loan->total_of_periods}}</td>
 			                <td>Q{{number_format($loan->monthly_payment, 2, '.', ',')}}</td>
-			                <td><input type="checkbox" id="{{$i}}"  class="checked" checked="checked"></td>
+			                <td>
+			                	<input type="checkbox" id="{{$i}}"  class="checked" checked="checked" value="1">
+			                	<input type="hidden" id="loan_id_{{$i}}" value="{{$loan->id}}" name="loan_id_{{$i}}" />
+			                </td>
 		              	</tr>
 		              	<?php
 		              		$totalPay = $totalPay + $loan->monthly_payment;
@@ -63,6 +66,9 @@
 		           		<tr>
 		           			<th colspan="2"><strong>Total</strong></th>
 		           			<th><strong>Q{{number_format($totalPay, 2, '.', ',')}}</strong></th>
+		           			<th>
+		           				<input type="hidden" id="total_Loans" value="{{$i}}" name="total_Loans" />
+		           			</th>
 		           		</tr>
 		           	</thead>
 		          </table>

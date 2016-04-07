@@ -12,7 +12,14 @@ class AddTableHistoryOfPayment extends Migration {
 	 */
 	public function up()
 	{
-		//
+		Schema::create('pay_loans', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->integer('loan_id');
+			$table->integer('paymentNumber');
+			$table->softDeletes();
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,7 +29,7 @@ class AddTableHistoryOfPayment extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::dropIfExists("pay_loans");
 	}
 
 }

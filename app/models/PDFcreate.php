@@ -126,9 +126,6 @@ class PDFcreate extends Eloquent
 		
 		//Generate PDF
 		$pdfFileName = $name.".pdf";
-		$stylesheet = file_get_contents("http://".$_SERVER['SERVER_NAME']."/packages/assets/css/bootstrap.css");
-		$stylesheet = file_get_contents("http://".$_SERVER['SERVER_NAME']."/packages/assets/font-awesome/css/font-awesome.css");
-   		$mpdf->WriteHTML($stylesheet,1);
 		$mpdf->WriteHTML($html);
 		if(isset($optionsMpdf[5]) && isset($optionsMpdf[6])){
 			if(filter_var($optionsMpdf[6], FILTER_VALIDATE_URL)){
