@@ -255,8 +255,8 @@ class LoansController extends \BaseController {
 			               	<th> Monto</th>
 			            </tr>
 			            <tr>
-				          	<td style="padding-left:60px"><h4>'.$i'.</h4></td>
-				         	<td><h4><strong>Q'.number_format($totalMontly, 2, '.', ',')'.</strong></h4></td>
+				          	<td style="padding-left:60px"><h4>'.$i.'</h4></td>
+				         	<td><h4><strong>Q'.number_format($totalMontly, 2, '.', ',').'</strong></h4></td>
 			            </tr>
 			        </table>';
 			$name = "Consolidado_".date('Y_m_d');
