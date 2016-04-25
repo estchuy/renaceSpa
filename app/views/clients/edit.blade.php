@@ -1,6 +1,6 @@
 @section('content')
 <h3>
-  <i class="fa fa-user"> </i>{{$client->name or 'Crear Cliente'}}
+  <i class="icon-user-follow"> </i>{{$client->name or ' Crear Cliente'}}
 </h3>
 <div class="row">
   <div class="col-sm-12">
@@ -18,8 +18,12 @@
                 </div>
                 <div class="input-group clearfix">
                    <label class="col-lg-2 control-label " for="nombre">Cumpleaños </label>
-                  <input type="text" id="cumple" placeholder="yyyy/mm/dd" class="form-control">
-                  <span class="input-group-addon bg-custom b-0 text-white required"><i class="icon-calender"></i></span>
+                   <div class="col-sm-8">
+                      <div class="input-group">
+                        <input type="text" style="color:#fc2b6a;" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
+                        <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+                       </div><!-- input-group -->
+                    </div>
                 </div>
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label " for="nombre">Edad </label>
@@ -361,19 +365,6 @@
                   </div>
                 </div>
               </section>
-          </div>
-          <div class="actions clearfix">
-            <ul aria-label="Pagination" role="menu">
-              <li class="disabled" aria-disabled="true">
-                <a role="menuitem" href="#previous">Previous</a>
-              </li>
-              <li aria-hidden="false" aria-disabled="false">
-                <a role="menuitem" href="#next">Next</a>
-              </li>
-              <li style="display: none;" aria-hidden="true">
-                <a role="menuitem" href="#finish">Finish</a>
-              </li>
-            </ul>
           </div>
         </div>
       </form>
