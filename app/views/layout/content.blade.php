@@ -29,6 +29,21 @@
         <!--Form Wizard-->
         <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/demo/css/jquery.steps.css" />
 
+        <!-- picker form -->
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+        <!-- Plugins css form Advanced -->
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/multiselect/css/multi-select.css"  rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css" /> 
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+
 
     </head>
 
@@ -259,7 +274,7 @@
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
 
         <!--Form Validation-->
-        <script src="assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
 
         <!--Form Validation-->
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
@@ -271,6 +286,34 @@
         <!--wizard initialization-->
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
 
+        <!-- picker form -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/moment/moment.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        
+        <!-- form advanced -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/switchery/dist/switchery.min.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/select2/select2.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-filestyle/src/bootstrap-filestyle.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+
+        <!-- Autocomplete -->
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/jquery.mockjax.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/countries.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/autocomplete.js"></script>
+
+        <!-- form mask -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autoNumeric/autoNumeric.js" type="text/javascript"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -284,7 +327,145 @@
             });
         </script>
 
+        <script type="text/javascript">
+            
+      jQuery(function($) {
+          $('.autonumber').autoNumeric('init');    
+      });
+        </script>
 
+          <script>
+        jQuery(document).ready(function() {
+
+          // Time Picker
+          jQuery('#timepicker').timepicker({
+            defaultTIme : false
+          });
+          jQuery('#timepicker2').timepicker({
+            showMeridian : false
+          });
+          jQuery('#timepicker3').timepicker({
+            minuteStep : 15
+          });
+          
+          //colorpicker start
+
+                  $('.colorpicker-default').colorpicker({
+                      format: 'hex'
+                  });
+                  $('.colorpicker-rgba').colorpicker();
+                  
+                  // Date Picker
+                  jQuery('#datepicker').datepicker();
+                  jQuery('#datepicker-autoclose').datepicker({
+                    autoclose: true,
+                    todayHighlight: true
+                  });
+                  jQuery('#datepicker-inline').datepicker();
+                  jQuery('#datepicker-multiple-date').datepicker({
+                      format: "mm/dd/yyyy",
+            clearBtn: true,
+            multidate: true,
+            multidateSeparator: ","
+                  });
+                  jQuery('#date-range').datepicker({
+                      toggleActive: true
+                  });
+                  
+                  //Clock Picker
+                  $('.clockpicker').clockpicker({
+                    donetext: 'Done'
+                  });
+                  
+                  $('#single-input').clockpicker({
+              placement: 'bottom',
+              align: 'left',
+              autoclose: true,
+              'default': 'now'
+          });
+          $('#check-minutes').click(function(e){
+              // Have to stop propagation here
+              e.stopPropagation();
+              $("#single-input").clockpicker('show')
+                      .clockpicker('toggleView', 'minutes');
+          });
+          
+          
+          //Date range picker
+          $('.input-daterange-datepicker').daterangepicker({
+            buttonClasses: ['btn', 'btn-sm'],
+                  applyClass: 'btn-default',
+                  cancelClass: 'btn-white'
+          });
+              $('.input-daterange-timepicker').daterangepicker({
+                  timePicker: true,
+                  format: 'MM/DD/YYYY h:mm A',
+                  timePickerIncrement: 30,
+                  timePicker12Hour: true,
+                  timePickerSeconds: false,
+                  buttonClasses: ['btn', 'btn-sm'],
+                  applyClass: 'btn-default',
+                  cancelClass: 'btn-white'
+              });
+              $('.input-limit-datepicker').daterangepicker({
+                  format: 'MM/DD/YYYY',
+                  minDate: '06/01/2015',
+                  maxDate: '06/30/2015',
+                  buttonClasses: ['btn', 'btn-sm'],
+                  applyClass: 'btn-default',
+                  cancelClass: 'btn-white',
+                  dateLimit: {
+                      days: 6
+                  }
+              });
+      
+              $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+      
+              $('#reportrange').daterangepicker({
+                  format: 'MM/DD/YYYY',
+                  startDate: moment().subtract(29, 'days'),
+                  endDate: moment(),
+                  minDate: '01/01/2012',
+                  maxDate: '12/31/2015',
+                  dateLimit: {
+                      days: 60
+                  },
+                  showDropdowns: true,
+                  showWeekNumbers: true,
+                  timePicker: false,
+                  timePickerIncrement: 1,
+                  timePicker12Hour: true,
+                  ranges: {
+                      'Today': [moment(), moment()],
+                      'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                      'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                      'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                      'This Month': [moment().startOf('month'), moment().endOf('month')],
+                      'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                  },
+                  opens: 'left',
+                  drops: 'down',
+                  buttonClasses: ['btn', 'btn-sm'],
+                  applyClass: 'btn-default',
+                  cancelClass: 'btn-white',
+                  separator: ' to ',
+                  locale: {
+                      applyLabel: 'Submit',
+                      cancelLabel: 'Cancel',
+                      fromLabel: 'From',
+                      toLabel: 'To',
+                      customRangeLabel: 'Custom',
+                      daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                      monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                      firstDay: 1
+                  }
+              }, function (start, end, label) {
+                  console.log(start.toISOString(), end.toISOString(), label);
+                  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+              });
+          
+        });
+      </script>
 
 
 
