@@ -53,6 +53,12 @@
                         <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
                     </div>
                 </div>
+                <div class="form-group clearfix">
+                    <label class="col-lg-2 control-label " for="nombre">Telefono/Celular </label>
+                    <div class="col-lg-6">
+                        <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                    </div>
+                </div>
                 
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label ">Referido </label>
