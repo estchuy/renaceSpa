@@ -6,20 +6,10 @@
   <div class="col-sm-12">
     <div class="card-box">
       <form action="#" id="wizard-validation-form" novalidate="novalidate">
-        <div id="steps-uid-1" class="wizard clearfix" role="application">
-          <div class="steps clearfix">
-            <ul role="tablist">
-              <li class="first current" role="tab" aria-disabled="false" aria-selected="true">
-              <li class="disabled" role="tab" aria-disabled="true">
-              <li class="disabled" role="tab" aria-disabled="true">
-              <li class="disabled" role="tab" aria-disabled="true">
-              <li class="disabled" role="tab" aria-disabled="true">
-              <li class="disabled last" role="tab" aria-disabled="true">
-            </ul>
-          </div>
-          <div class="content clearfix">
-            <h3 id="steps-uid-1-h-0" class="title current" tabindex="-1">Paso 1</h3>
-              <section id="steps-uid-1-p-0" role="tabpanel" aria-labelledby="steps-uid-1-h-0" class="body current" aria-hidden="false">
+        
+          <div>
+            <h3>Paso 1</h3>
+            <section>
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label " for="nombre">Nombre y Apellidos </label>
                     <div class="col-lg-10">
@@ -79,8 +69,9 @@
                     </select>
                 </div>
               </section>
-              <h3 id="steps-uid-1-h-1" tabindex="-1" class="title">Paso 2</h3>
-              <section id="steps-uid-1-p-1" role="tabpanel" aria-labelledby="steps-uid-1-h-1" class="body" style="display: none;" aria-hidden="true">
+              
+              <h3>Step 2</h3>
+              <section>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -208,8 +199,9 @@
                   </div>
                 </div>
             </section>
-            <h3 id="steps-uid-1-h-2" tabindex="-1" class="title">Paso 3</h3>
-              <section id="steps-uid-1-p-2" role="tabpanel" aria-labelledby="steps-uid-1-h-2" class="body" style="display: none;" aria-hidden="true">
+            
+              <h3>Paso 3</h3>
+              <section>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -232,8 +224,8 @@
                   </div>
                 </div>
               </section>
-            <h3 id="steps-uid-1-h-3" tabindex="-1" class="title">Paso 4</h3>
-              <section id="steps-uid-1-p-3" role="tabpanel" aria-labelledby="steps-uid-1-h-3" class="body" style="display: none;" aria-hidden="true">
+            <h3>Paso 4</h3>
+              <section>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -283,8 +275,9 @@
                   </div>
                 </div>
             </section>
-            <h3 id="steps-uid-1-h-4" tabindex="-1" class="title">Paso 5</h3>
-              <section id="steps-uid-1-p-4" role="tabpanel" aria-labelledby="steps-uid-1-h-4" class="body" style="display: none;" aria-hidden="true">
+
+            <h3>Paso 5</h3>
+              <section>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -346,8 +339,9 @@
                   </div>
                 </div>
             </section>
-            <h3 id="steps-uid-1-h-5" tabindex="-1" class="title">Paso 6</h3>
-              <section id="steps-uid-1-p-5" role="tabpanel" aria-labelledby="steps-uid-1-h-5" class="body" style="display: none;" aria-hidden="true">
+            
+            <h3>Paso 6</h3>
+              <section>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -381,9 +375,20 @@
               </li>
             </ul>
           </div>
+        </div>
       </form>
     </div>
   </div>
 </div>
 <!-- End row -->
+<!--Form Validation-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+
+        <!--Form Wizard-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+        <!--wizard initialization-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
+
 @stop
