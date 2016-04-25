@@ -6,7 +6,7 @@
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
-        <link rel="shortcut icon" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/favicon_1.ico">
+        <link rel="shortcut icon" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/renaceSpa_ico.ico">
 
         <title>Renace Spa System</title>
 
@@ -43,7 +43,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>" class="logo"><img class="img-circle thumb-sm" alt="user-img" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/renaceSpa"></a>
+                        <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>" class="logo"><img class="img-circle thumb-sm" alt="user-img" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/renaceSpa.png"></a>
                     </div>
                 </div>
 
@@ -271,6 +271,16 @@
 
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.core.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
+
+        <!--Form Validation-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+
+        <!--Form Wizard-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+        <!--wizard initialization-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
 
 
 
