@@ -316,18 +316,6 @@
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autoNumeric/autoNumeric.js" type="text/javascript"></script>
 
         <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $('.counter').counterUp({
-                    delay: 100,
-                    time: 1200
-                });
-
-                $(".knob").knob();
-
-            });
-        </script>
-
-        <script type="text/javascript">
             
       jQuery(function($) {
           $('.autonumber').autoNumeric('init');    
