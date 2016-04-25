@@ -1,4 +1,6 @@
 @section('content')
+<!--Form Wizard-->
+<link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/demo/css/jquery.steps.css" />
 <h3>
   <i class="fa fa-user"> </i>{{$client->name or 'Crear Cliente'}}
 </h3>
