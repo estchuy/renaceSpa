@@ -272,17 +272,6 @@
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.core.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
 
-        <!--Form Validation-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
-
-        <!--Form Wizard-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-
-        <!--wizard initialization-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
-
-
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
