@@ -1,147 +1,297 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
 
-    <title>LOAN System</title>
+        <link rel="shortcut icon" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/favicon_1.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/lineicons/style.css">    
-    
-    <!-- Custom styles for this template -->
-    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style.css" rel="stylesheet">
-    <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/style-responsive.css" rel="stylesheet">
+        <title>Renace Spa System</title>
 
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/chart-master/Chart.js"></script>
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-      .notification {
-        margin: 5% 0;
-        opacity: 0.95;
-        position: absolute;
-        right: 0;
-        width: 86%;
-        z-index: 1000;
-      }
-    </style>
-  </head>
+        <link rel="stylesheet" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/chartist/dist/chartist.min.css">
 
-  <body>
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/core.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
-            <!--logo start-->
-            <a href="/" class="logo"><b>Loan System</b></a>
-            <!--logo end-->
-            <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-            	</ul>
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/modernizr.min.js"></script>
+
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Ub<i class="md md-album"></i>ld</span></a>
+                    </div>
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="">
+                            <div class="pull-left">
+                                <button class="button-menu-mobile open-left waves-effect">
+                                        <i class="md md-menu"></i>
+                                    </button>
+                                <span class="clearfix"></span>
+                            </div>
+
+                            <ul class="nav navbar-nav hidden-xs">
+
+                                <li><a href="#" class="waves-effect">Files</a></li>
+                                <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle waves-effect" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                  <ul class="dropdown-menu dropdown-menu-animate">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Separated link</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+
+
+                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                           <input type="text" placeholder="Search..." class="form-control">
+                           <a href=""><i class="fa fa-search"></i></a>
+                      </form>
+
+
+                            <ul class="nav navbar-nav navbar-right pull-right">
+                                <li class="dropdown hidden-xs">
+                                    <a href="#" data-target="#" class="dropdown-toggle waves-effect" data-toggle="dropdown" aria-expanded="true">
+                                        <i class="fa fa-bell-o"></i> <span class="badge badge-xs badge-danger">3</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-animate drop-menu-right dropdown-menu-lg">
+                                        <li class="notifi-title"><span class="label label-default pull-right">New 3</span>Notification</li>
+                                        <li class="list-group nicescroll notification-list">
+                                           <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-diamond noti-primary"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">A new order has been placed A new order has been placed</h5>
+                                                    <p class="m-0">
+                                                        <small>There are new settings available</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                           <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-cog noti-warning"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">New settings</h5>
+                                                    <p class="m-0">
+                                                        <small>There are new settings available</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                           <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-bell-o noti-custom"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">Updates</h5>
+                                                    <p class="m-0">
+                                                        <small>There are <span class="text-primary font-600">2</span> new updates available</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                           <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-user-plus noti-pink"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">New user registered</h5>
+                                                    <p class="m-0">
+                                                        <small>You have 10 unread messages</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                            <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-diamond noti-primary"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">A new order has been placed A new order has been placed</h5>
+                                                    <p class="m-0">
+                                                        <small>There are new settings available</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                           <!-- list item-->
+                                           <a href="javascript:void(0);" class="list-group-item">
+                                              <div class="media">
+                                                 <div class="pull-left p-r-10">
+                                                    <em class="fa fa-cog noti-warning"></em>
+                                                 </div>
+                                                 <div class="media-body">
+                                                    <h5 class="media-heading">New settings</h5>
+                                                    <p class="m-0">
+                                                        <small>There are new settings available</small>
+                                                    </p>
+                                                 </div>
+                                              </div>
+                                           </a>
+
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="list-group-item text-right">
+                                                <small class="font-600">See all notifications</small>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="hidden-xs">
+                                    <a href="#" class="right-bar-toggle waves-effect"><i class="fa fa-cog"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="" class="dropdown-toggle profile waves-effect" data-toggle="dropdown" aria-expanded="true"><img src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a>
+                                    <ul class="dropdown-menu dropdown-menu-animate drop-menu-right">
+                                        <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                        <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
+                                        <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
+                                        <li><a href="javascript:void(0)"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
             </div>
-        </header>
-      <!--header end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
-      @include('layout.menu')
-      <!--sidebar end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper">
-            @if(Session::has('notification'))
-              <div id="notificationDiv" class="centered alert-dismissable {{Session::get('level')}}">
-                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-                <b>{{Session::get('notification')}}</b>
-              </div>
-            @endif
-             @yield("content")
-          </section>
-      </section>
-      <!--main content end-->
-  </section>
+            <!-- Top Bar End -->
+            <!-- ========== Left Sidebar Start MENU ========== -->
+            @include('layout.menu')
+            <!-- Left Sidebar End -->
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.js"></script>
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery-1.8.3.min.js"></script>
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.sparkline.js"></script>
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+                      @if(Session::has('notification'))
+                        <div id="notificationDiv" class="{{Session::get('level')}} alert-dismissable">
+                            <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                            <strong>{{Session::get('notification')}}</strong>
+                        </div>
+                      @endif
+                       @yield("content")
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <footer class="footer text-right">
+                    DySChuy 2016 www.estuardochuy.com
+                </footer>
+
+            </div>
+        </div>
+        <!-- END wrapper -->
 
 
-    <!--common script for all pages-->
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/common-scripts.js"></script>
-    
-    <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/gritter-conf.js"></script>
 
-    <!--script for this page-->
-    <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/sparkline-chart.js"></script>    
-	<script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/zabuto_calendar.js"></script>	
-	
-	<script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- jQuery  -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/bootstrap.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/detect.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/fastclick.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.slimscroll.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.blockUI.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/waves.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/wow.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/peity/jquery.peity.min.js"></script>
+
+        <!-- jQuery  -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/counterup/jquery.counterup.min.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/chartist/dist/chartist.min.js"></script>
+
+        <!-- Knob -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-knob/jquery.knob.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.dashboard.js"></script>
+
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.core.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
+
+
+
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 100,
+                    time: 1200
+                });
+
+                $(".knob").knob();
+
             });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                    {type: "text", label: "Special event", badge: "00"},
-                    {type: "block", label: "Regular event", }
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-        }
-    </script>
-  
+        </script>
 
-  </body>
+
+
+
+
+    </body>
 </html>
+
+
+
