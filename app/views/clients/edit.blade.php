@@ -56,12 +56,13 @@
                 
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label ">Referido </label>
-                    <select class="form-control select2">
-                      <option>Select</option>
-                      <option value="AK">Estuardo Chuy</option>
-                      <option value="HI">Francisco Flores</option>
-                    </select>
-                      
+                    <div class="col-sm-6">
+                      <select class="form-control select2" style="color:#fc2b6a;">
+                        <option>Select</option>
+                        <option value="AK">Estuardo Chuy</option>
+                        <option value="HI">Francisco Flores</option>
+                      </select>
+                    </div>
                 </div>
               </section>
               
