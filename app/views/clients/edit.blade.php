@@ -1,6 +1,4 @@
 @section('content')
-<!--Form Wizard-->
-<link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/demo/css/jquery.steps.css" />
 <h3>
   <i class="fa fa-user"> </i>{{$client->name or 'Crear Cliente'}}
 </h3>
@@ -383,14 +381,5 @@
   </div>
 </div>
 <!-- End row -->
-<!--Form Validation-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
-
-        <!--Form Wizard-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-
-        <!--wizard initialization-->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
 
 @stop
