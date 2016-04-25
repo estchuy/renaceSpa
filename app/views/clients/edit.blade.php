@@ -27,6 +27,7 @@
                     </div>
                 </div>
                 <div class="input-group clearfix">
+                   <label class="col-lg-2 control-label " for="nombre">Cumpleaños </label>
                   <input type="text" id="cumple" placeholder="yyyy/mm/dd" class="form-control">
                   <span class="input-group-addon bg-custom b-0 text-white required"><i class="icon-calender"></i></span>
                 </div>
