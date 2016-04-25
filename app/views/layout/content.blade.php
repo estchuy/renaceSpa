@@ -10,8 +10,6 @@
 
         <title>Renace Spa System</title>
 
-        <link rel="stylesheet" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/chartist/dist/chartist.min.css">
-
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -27,6 +25,9 @@
         <![endif]-->
 
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/modernizr.min.js"></script>
+
+        <!--Form Wizard-->
+        <link rel="stylesheet" type="text/css" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/demo/css/jquery.steps.css" />
 
 
     </head>
@@ -254,23 +255,21 @@
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
 
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/peity/jquery.peity.min.js"></script>
-
-        <!-- jQuery  -->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/waypoints/lib/jquery.waypoints.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/counterup/jquery.counterup.min.js"></script>
-
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/chartist/dist/chartist.min.js"></script>
-
-        <!-- Knob -->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-knob/jquery.knob.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
-
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.dashboard.js"></script>
-
-
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.core.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
+
+        <!--Form Validation-->
+        <script src="assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+
+        <!--Form Validation-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrapvalidator/dist/js/bootstrapValidator.js" type="text/javascript"></script>
+
+        <!--Form Wizard-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery.steps/build/jquery.steps.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+
+        <!--wizard initialization-->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
 
 
         <script type="text/javascript">
