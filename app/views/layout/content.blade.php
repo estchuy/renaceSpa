@@ -43,7 +43,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>" class="logo"><img class="img-circle thumb-sm" alt="user-img" src="assets/images/renaceSpa"></a>
+                        <a href="http://<?php echo $_SERVER['SERVER_NAME']; ?>" class="logo"><img class="img-circle thumb-sm" alt="user-img" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/images/renaceSpa"></a>
                     </div>
                 </div>
 
