@@ -6,8 +6,6 @@
   <div class="col-sm-12">
     <div class="card-box">
       <form action="#" id="wizard-vertical">
-        
-          <div>
             <h3>Paso 1</h3>
             <section>
                 <div class="form-group clearfix">
@@ -358,8 +356,6 @@
                   </div>
                 </div>
               </section>
-          </div>
-        </div>
       </form>
     </div>
   </div>
