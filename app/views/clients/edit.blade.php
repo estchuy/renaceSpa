@@ -12,114 +12,235 @@
   }
 </script>
 <section class="wrapper">
-	<h3>
-		<i class="fa fa-user"></i> Cliente {{$client->name or 'Crear'}}
-	</h3>
-	<div class="row mt">
-	  <div class="col-md-12">
-      <form method="post" class="form-horizontal tasi-form" id="clientInfo" action="/client/save">
-	       <div class="form-panel">
-  	        <div class="form-group">
-                	<label class="col-sm-1 col-sm-2 control-label">Nombre</label>
-                 	<div class="col-sm-5">
-                    <input type="hidden" id="id" name="id" value="{{$client->id or 0}}" />
-                   	<input type="text" id="nombre" name="nombre"  placeholder="Nombre" value="{{$client->name or ''}}" class="form-control round-form">
-                 	</div>
-          	</div>
-          	<div class="form-group">
-                	<label class="col-sm-1 col-sm-2 control-label">DPI</label>
-                 	<div class="col-sm-5">
-                   	<input type="text" id="dpi" name="dpi"  placeholder="Documento Personal de Identificacion" value="{{$client->personal_id or ''}}" class="form-control round-form">
-                 	</div>
-          	</div>
-          	<div class="form-group">
-                	<label class="col-sm-1 col-sm-2 control-label">Direccion</label>
-                 	<div class="col-sm-5">
-                   	<input type="text" id="address" name="address"  placeholder="Direccion" value="{{$client->address or ''}}" class="form-control round-form">
-                 	</div>
-          	</div>
-          	<div class="form-group">
-                	<label class="col-sm-1 col-sm-2 control-label">Telefono</label>
-                 	<div class="col-sm-5">
-                   	<input type="text" id="phone" name="phone"  placeholder="Telefono" value="{{$client->phone or ''}}" class="form-control round-form">
-                 	</div>
-          	</div>
-          	<div class="form-group">
-                	<label class="col-sm-1 col-sm-2 control-label">Email</label>
-                 	<div class="col-sm-5">
-                   	<input type="text" id="email" name="email"  placeholder="Direccion de Correo Electronico" value="{{$client->email or ''}}" class="form-control round-form">
-                 	</div>
-          	</div>
-            <div class="form-group">
-              <div style="padding-top:30px">
-                  <button type="submit" form="clientInfo" class="btn btn-primary btn-lg btn-block" type="button"><i class="fa fa-cog"> </i> Guardar</button>
-                </div>
-            </div>
-          </div><!-- /content-panel -->
-        </form>
-        @if(isset($edit))
-          @if(count($loans) == 0)
-            <div class="form-panel">
-              <div class="form-group">
-                <button class="btn btn-theme03" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
-              </div>
-            </div>
-          @else
-            <!-- Resumen de Pagos -->
-            <div class="form-panel">
-              <div class="form-group">
-                <h4 class="mb"> Historial </h4>
-                <button id="buttonHistorico" class="btn btn-theme" type="button" onclick="javascript:switchClassi();"><i class="fa fa-chevron-circle-down"></i> Mostrar</button>
-                <button class="btn btn-theme03" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button>
-              </div>
-              <div class="form-group" id="loanHistoryDiv" style="display:none;">
+  <h3>
+    <i class="fa fa-user"></i>{{$client->name or 'Crear Cliente'}}
+  </h3>
+<div class="row">
+              <div class="col-sm-12">
+                <div class="card-box">
+                  <h4 class="m-t-0 header-title"><b>{{$client->name or 'Crear'}}</b></h4>
+                  <p class="text-muted m-b-30 font-13">
+                    Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.
+                  </p>
                   
-                    <div class="content-panel">
-                      <?php $i = 1;?>
-                      @foreach($loans as $loan)
-                        <table class="table table-striped table-advance table-hover">
-                            <h4><i class="fa fa-users"></i> Prestamo # {{$i}} - <strong>Q{{number_format($loan->amnt, 2, '.', ',')}}</strong></h4>
-                            <hr>
-                            <thead>
-                            <tr>
-                                <th><i class="fa fa-user"></i> Plazo</th>
-                                <th><i class="fa fa-bookmark"></i> Cuotas</th>
-                                <th><i class="fa fa-bookmark"></i> Interes</th>
-                                <th><i class="fa fa-bookmark"></i> Capital</th>
-                                <th><i class="fa fa-bookmark"></i> Saldo</th>
-                                <th><i class=" fa fa-edit"></i> Status</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php
-                              $loanDetails = Loan::getDetailLoans($loan->id);
-                            ?>
-                            @foreach($loanDetails as $loanDetail) 
-                              <tr>
-                                <td>{{$loanDetail->period_id}}</td>
-                                <td>Q{{number_format($loanDetail->monthly_payment, 2, '.', ',')}}</td>
-                                <td>Q{{number_format($loanDetail->interest_fee, 2, '.', ',')}}</td>
-                                <td>Q{{number_format($loanDetail->capital, 2, '.', ',')}}</td>
-                                <td>Q{{number_format($loanDetail->balance, 2, '.', ',')}}</td>
-                                <td>
-                                  @if($loanDetail->pay == 0)
-                                    <span class="badge bg-important">Pendiente</span>
-                                  @else
-                                    <span class="badge bg-success">Pagado</span>
-                                  @endif
-                                </td>
-                              </tr>
-                              @endforeach
-                          </tbody>
-                        </table>
-                        <?php $i++;?>
-                        @endforeach
-                    </div><!-- /content-panel -->
+                  <form id="wizard-validation-form" action="#">
+                                        <div>
+                                            <h3>Datos Generales</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">Nombre y Apellidos </label>
+                                                    <div class="col-lg-10">
+                                                        <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="input-group clearfix">
+                                                  <input type="text" id="cumple" placeholder="yyyy/mm/dd" class="form-control">
+                                                  <span class="input-group-addon bg-custom b-0 text-white required"><i class="icon-calender"></i></span>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">Edad </label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="required form-control autonumber" style="color:#fc2b6a;" data-v-min="1" data-v-max="150" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">Estado Civil </label>
+                                                    <div class="col-lg-10">
+                                                        <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">DPI </label>
+                                                    <div class="col-lg-10">
+                                                        <input class="required form-control" data-mask="9999 99999 9999" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">Direccion </label>
+                                                    <div class="col-lg-10">
+                                                        <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-2 control-label " for="nombre">Correo </label>
+                                                    <div class="col-lg-10">
+                                                        <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group clearfix">
+                                                    <label class="col-lg-12 control-label ">Referido </label>
+                                                    <div class="select2-container form-control select2" id="s2id_autogen1">
+                                                      <a tabindex="-1" class="select2-choice" href="javascript:void(0)">   
+                                                      <span class="select2-chosen" id="select2-chosen-2">Alaska</span>
+                                                      <abbr class="select2-search-choice-close"></abbr>   
+                                                      <span role="presentation" class="select2-arrow"><b role="presentation"></b></span></a>
+                                                      <label class="select2-offscreen" for="s2id_autogen2"></label>
+                                                      <input type="text" role="button" aria-haspopup="true" class="select2-focusser select2-offscreen" aria-labelledby="select2-chosen-2" id="s2id_autogen2">
+                                                    </div>
+                                                    <select class="form-control select2" tabindex="-1" title="" style="display: none;">
+                                                      <option>Select</option>
+                                                      <option value="AK">Alaska</option>
+                                                      <option value="HI">Hawaii</option>
+                                                    </select>
+                                                </div>
+                                            </section>
+                                            <h3>Step 2</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                  <div class="col-lg-6 col-md-6">
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Diabetes
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Hipertension Arterial
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Problemas de Tiroides
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Desorden Hormonales
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Epilepsia
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Problemas Cardiacos/Marcapasos
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Cancer
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Asma o Alergia
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Queloides
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          VIH
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-lg-6 col-md-6">
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Enfermedad Renal
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Higado Graso
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Problemas Neurologicos
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Depresion
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Enfermedades Neuromusculares
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Eclerodermia
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Psoriasis
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Herpes
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Problemas Respiratorios
+                                                      </label>
+                                                    </div>
+                                                    <div class="checkbox checkbox-pink checkbox-circle">
+                                                      <input type="checkbox" id="checkbox-14">
+                                                      <label for="checkbox-14">
+                                                          Otros
+                                                      </label>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                            </section>
+                                            <h3>Step 3</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <div class="col-lg-12">
+                                                        <ul class="list-unstyled w-list">
+                                                          <li><b>First Name :</b> Jonathan </li>
+                                                          <li><b>Last Name :</b> Smith </li>
+                                                          <li><b>Emial:</b> jonathan@smith.com</li>
+                                                          <li><b>Address:</b> 123 Your City, Cityname. </li>
+                                                      </ul>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <h3>Step Final</h3>
+                                            <section>
+                                                <div class="form-group clearfix">
+                                                    <div class="col-lg-12">
+                                                        <input id="acceptTerms-2" name="acceptTerms2" type="checkbox" class="required">
+                                                        <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+                                                    </div>
+                                                </div>
+
+                                            </section>
+                                        </div>
+                                    </form>
+                </div>
               </div>
-            </div><!-- End loans history -->
-          @endif
-        @endif
-	  </div><!-- /col-md-12 -->
-	</div><!-- /row -->
-</section>
+            </div>
+                        <!-- End row -->
 @stop
