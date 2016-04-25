@@ -36,6 +36,14 @@
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/clockpicker/dist/jquery-clockpicker.min.css" rel="stylesheet">
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
+        <!-- Plugins css form Advanced -->
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/switchery/dist/switchery.min.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/multiselect/css/multi-select.css"  rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css" /> 
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+
 
     </head>
 
@@ -278,6 +286,34 @@
         <!--wizard initialization-->
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/jquery.wizard-init.js" type="text/javascript"></script>
 
+        <!-- picker form -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/moment/moment.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        
+        <!-- form advanced -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/switchery/dist/switchery.min.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/multiselect/js/jquery.multi-select.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/select2/select2.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-select/dist/js/bootstrap-select.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-filestyle/src/bootstrap-filestyle.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+
+        <!-- Autocomplete -->
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/jquery.mockjax.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/jquery.autocomplete.min.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autocomplete/countries.js"></script>
+        <script type="text/javascript" src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/autocomplete.js"></script>
+
+        <!-- form mask -->
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/autoNumeric/autoNumeric.js" type="text/javascript"></script>
 
         <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -291,14 +327,13 @@
             });
         </script>
 
-        <!-- picker form -->
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/moment/moment.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
-        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-          
+        <script type="text/javascript">
+            
+      jQuery(function($) {
+          $('.autonumber').autoNumeric('init');    
+      });
+        </script>
+
           <script>
         jQuery(document).ready(function() {
 
