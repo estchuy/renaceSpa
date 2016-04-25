@@ -6,7 +6,7 @@
   <div class="col-sm-12">
     <div class="card-box">
       <form action="#" id="wizard-vertical">
-            <h3>Paso 1</h3>
+            <h3>Datos Personales</h3>
             <section>
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label " for="nombre">Nombre y Apellidos </label>
@@ -56,17 +56,19 @@
                 
                 <div class="form-group clearfix">
                     <label class="col-lg-2 control-label ">Referido </label>
-                    <select class="form-control select2">
-                      <option>Select</option>
-                      <option value="AK">Estuardo Chuy</option>
-                      <option value="HI">Francisco Flores</option>
-                    </select>
-                      
+                    <div class="col-sm-6">
+                      <select class="form-control select2" style="color:#fc2b6a;">
+                        <option>Select</option>
+                        <option value="AK">Estuardo Chuy</option>
+                        <option value="HI">Francisco Flores</option>
+                      </select>
+                    </div>
                 </div>
               </section>
               
-              <h3>Paso  2</h3>
+              <h3>Historial Medico</h3>
               <section>
+                <h4 class="m-t-0 header-title"><b>Padece o ha padecido de las siguientes enfermedades</b></h4>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -195,8 +197,9 @@
                 </div>
             </section>
             
-              <h3>Paso 3</h3>
+              <h3>Tratamiento Medico</h3>
               <section>
+                <h4 class="m-t-0 header-title"><b>Esta actualmente o durante el año pasado en algun tratamiento medico o nutricinal </b></h4>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
@@ -204,7 +207,7 @@
                       <label for="checkbox-14">
                           Si
                       </label>
-                      <div class="col-lg-5">
+                      <div class="col-sm-4">
                         <input class="required form-control" style="color:#fc2b6a;" id="nombre" name="nombre" type="text">
                       </div>
                     </div>
@@ -219,32 +222,33 @@
                   </div>
                 </div>
               </section>
-            <h3>Paso 4</h3>
+            <h3>Historial Medicamento</h3>
               <section>
+                <h4 class="m-t-0 header-title"><b>Esta actualmente o durante el año pasado ingiriendo</b></h4>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Diabetes
+                          Vitamina E
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Hipertension Arterial
+                          Gingo Biloba
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Problemas de Tiroides
+                          Isotretironia/Roaccutante/Isoface
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Desorden Hormonales
+                          Estereoides
                       </label>
                     </div>
                   </div>
@@ -252,57 +256,58 @@
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Enfermedad Renal
+                          Aspirina
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Higado Graso
+                          Walfarina
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Problemas Neurologicos
+                          Tranquilizantes/psicofarmacos
                       </label>
                     </div>
                   </div>
                 </div>
             </section>
 
-            <h3>Paso 5</h3>
+            <h3>Piel</h3>
               <section>
+                <h4 class="m-t-0 header-title"><b>En la piel Aplica</b></h4>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Diabetes
+                          Retina A
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Hipertension Arterial
+                          Hidraquinona
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Problemas de Tiroides
+                          Esteroides
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Desorden Hormonales
+                          Protector Solar
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Desorden Hormonales
+                          Cremas antiedad
                       </label>
                     </div>
                   </div>
@@ -310,33 +315,34 @@
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Enfermedad Renal
+                          Tonico
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Higado Graso
+                          Jabon 
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Problemas Neurologicos
+                          Humectante
                       </label>
                     </div>
                     <div class="checkbox checkbox-pink checkbox-circle">
                       <input type="checkbox" id="checkbox-14">
                       <label for="checkbox-14">
-                          Problemas Neurologicos
+                          Serum/Exfoliante
                       </label>
                     </div>
                   </div>
                 </div>
             </section>
             
-            <h3>Paso 6</h3>
+            <h3>Embarazada o Lactancia</h3>
               <section>
+                <h4 class="m-t-0 header-title"><b>Esta usted embarazada o dando lactancia materna?</b></h4>
                 <div class="form-group clearfix">
                   <div class="col-lg-6 col-md-6">
                     <div class="checkbox checkbox-pink checkbox-circle">
