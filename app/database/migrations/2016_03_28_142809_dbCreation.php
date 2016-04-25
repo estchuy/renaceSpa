@@ -33,7 +33,7 @@ class DbCreation extends Migration {
 			$table->timestamps();
 		});
 
-		Schema::create('menu', function(Blueprint $table)
+		Schema::create('menus', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name');

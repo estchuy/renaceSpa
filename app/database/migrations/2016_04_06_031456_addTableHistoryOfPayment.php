@@ -86,7 +86,7 @@ class AddTableHistoryOfPayment extends Migration {
             $table->boolean("pregnant");
             $table->boolean("medic_treatment");
             $table->string("medic_treatment_detail");
-            $table->interger('age');
+            $table->integer('age');
             $table->string("civil_status");
             $table->string("cumple");
       		
