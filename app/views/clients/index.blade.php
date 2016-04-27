@@ -3,8 +3,15 @@
     <div class="col-sm-12">
         <div class="card-box table-responsive">
             <h4 class="m-t-0 header-title"><i class="md icon-people "></i> <b>Clientes</b></h4>
-
-            <table id="datatable" class="table table-striped table-bordered">
+            <div class="button-list">
+	            <a href="/clients/new" type="button" class="btn btn-default btn-rounded waves-effect waves-light">Crear Cliente
+	               <span class="btn-label btn-label-right"><i class="icon-user-follow"></i>
+	               </span>
+	            </a>
+        	</div>
+            <p class="text-muted font-13 m-b-30">
+            </p>
+            <table id="datatable-buttons" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Cliente</th>
