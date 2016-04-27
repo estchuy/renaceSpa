@@ -37,7 +37,15 @@
                 <div class="form-group clearfix">
                     <label class="col-lg-3 control-label " for="estado">Estado Civil </label>
                     <div class="col-lg-6">
-                        <input class="required form-control" style="color:#fc2b6a;" id="estado" name="estado" type="text">
+                      <select class="form-control select2" id="estado" name="estado" >
+                        <option>Select</option>
+                        <option value="Soltero/a">Soltero/a</option>
+                        <option value="Comprometido/a">Comprometido/a</option>
+                        <option value="Casado/a">Casado/a</option>
+                        <option value="Divorciado/a">Divorciado/a</option>
+                        <option value="Viudo/a">Viudo/a</option>
+                      </select>
+                       
                     </div>
                 </div>
                 <div class="form-group clearfix">
