@@ -25,7 +25,7 @@
     //init
     PeityChart.prototype.init = function() {
         //live graph
-        var updatingChart = this.createLine(".updating-chart",'#5fbeaa','#5fbeaa', 120,40);
+        var updatingChart = this.createLine(".updating-chart",'#34d3eb','#34d3eb', 120,40);
 
         setInterval(function() {
             var random = Math.round(Math.random() * 10)

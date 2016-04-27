@@ -1,50 +1,92 @@
-//Overlapping bars on mobile
 
-var data = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  series: [
-    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4],
-    [6, 3, 5, 9, 8, 5, 6, 8, 3, 2, 3, 6]
-  ]
-};
+/**
+* Theme: Ubold Admin Template
+* Author: Coderthemes
+* Morris Chart
+*/
 
-var options = {
-  seriesBarDistance: 10
-};
+!function($) {
+    "use strict";
 
-var responsiveOptions = [
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
-      }
-    }
-  }]
-];
-
-new Chartist.Bar('#overlapping-bars', data, options, responsiveOptions);
-
-$('#sparkline1').sparkline([0, 23, 43, 35, 44, 45, 56, 37, 40], {
-            type: 'line',
-            width: $('#sparkline1').width(),
-            height: '180',
-            chartRangeMax: 50,
-            lineColor: '#5fbeaa',
-            fillColor: 'rgba(95, 190, 170, 0.3)',
-            highlightLineColor: 'rgba(0,0,0,.1)',
-            highlightSpotColor: 'rgba(0,0,0,.2)',
+    var Dashboard1 = function() {
+    	this.$realData = []
+    };
+    
+    //creates Stacked chart
+    Dashboard1.prototype.createStackedChart  = function(element, data, xkey, ykeys, labels, lineColors) {
+        Morris.Bar({
+            element: element,
+            data: data,
+            xkey: xkey,
+            ykeys: ykeys,
+            stacked: true,
+            labels: labels,
+            hideHover: 'auto',
+            resize: true, //defaulted to true
+            gridLineColor: '#eeeeee',
+            barColors: lineColors
         });
+    },
 
-$('#sparkline1').sparkline([25, 23, 26, 24, 25, 32, 30, 24, 19], {
-            type: 'line',
-            width: $('#sparkline1').width(),
-            height: '180',
-            chartRangeMax: 40,
-            lineColor: '#5d9cec',
-            fillColor: 'rgba(93, 156, 236, 0.3)',
-            composite: true,
-            highlightLineColor: 'rgba(0,0,0,.1)',
-            highlightSpotColor: 'rgba(0,0,0,.2)',
+    //creates line chart
+    Dashboard1.prototype.createLineChart = function(element, data, xkey, ykeys, labels, opacity, Pfillcolor, Pstockcolor, lineColors) {
+        Morris.Line({
+          element: element,
+          data: data,
+          xkey: xkey,
+          ykeys: ykeys,
+          labels: labels,
+          fillOpacity: opacity,
+          pointFillColors: Pfillcolor,
+          pointStrokeColors: Pstockcolor,
+          behaveLikeLine: true,
+          gridLineColor: '#eef0f2',
+          lineWidth: '4px',
+          hideHover: 'auto',
+          resize: true, //defaulted to true
+          pointSize: 0,
+          lineColors: lineColors
         });
+    },
+    
+    
+    Dashboard1.prototype.init = function() {
+
+        //creating Stacked chart
+        var $stckedData  = [
+            { y: '2005', a: 45, b: 180, c: 100 },
+            { y: '2006', a: 75,  b: 65, c: 80 },
+            { y: '2007', a: 100, b: 90, c: 56 },
+            { y: '2008', a: 75,  b: 65, c: 89 },
+            { y: '2009', a: 100, b: 90, c: 120 },
+            { y: '2010', a: 75,  b: 65, c: 110 },
+            { y: '2011', a: 50,  b: 40, c: 85 },
+            { y: '2012', a: 75,  b: 65, c: 52 },
+            { y: '2013', a: 50,  b: 40, c: 77 },
+            { y: '2014', a: 75,  b: 65, c: 90 },
+            { y: '2015', a: 100, b: 90, c: 130 }
+        ];
+        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b', 'c'], ['Desktops', 'Tablets', 'Mobiles'], ['#7e57c2', '#b39ddb', '#ede7f6']);
+
+        //create line chart
+        var $data  = [
+            { y: '2008', a: 50, b: 0 },
+            { y: '2009', a: 75, b: 50 },
+            { y: '2010', a: 30, b: 80 },
+            { y: '2011', a: 50, b: 50 },
+            { y: '2012', a: 75, b: 10 },
+            { y: '2013', a: 50, b: 40 },
+            { y: '2014', a: 75, b: 50 },
+            { y: '2015', a: 100, b: 70 }
+          ];
+        this.createLineChart('morris-line-example', $data, 'y', ['a', 'b'], ['Desktops', 'Tablets'],['0.1'],['#ffffff'],['#999999'], ['#7e57c2', '#34d3eb']);
+    },
+    //init
+    $.Dashboard1 = new Dashboard1, $.Dashboard1.Constructor = Dashboard1
+}(window.jQuery),
+
+//initializing 
+function($) {
+    "use strict";
+    $.Dashboard1.init();
+}(window.jQuery);

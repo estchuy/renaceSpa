@@ -32,10 +32,10 @@ File: Pages
 
 ============= */
 
-
 /* =============
    Calendar
 ============= */
+
 
 .calendar {
   float: left;
@@ -153,11 +153,13 @@ File: Pages
    Form Advanced
 ============= */
 
-/* Tags input */
+/* Bootstrap tagsinput */
 .bootstrap-tagsinput {
   box-shadow: none;
-  padding: 3px 7px 6px;
+  padding: 6px 7px 6px;
   border: 1px solid #e3e3e3;
+  min-height: 38px;
+  width: 100%;
 
   .label-info {
     background-color: @custom !important;
@@ -190,7 +192,7 @@ File: Pages
     }
   }
 }
-/* Select2*/
+/* Select 2 */
 .select2-container {
   .select2-choice {
     background-image: none !important;
@@ -531,7 +533,6 @@ File: Pages
 
 
 
-
 /* =============
    Notification
 ============= */
@@ -595,10 +596,10 @@ File: Pages
 
 
 
-
 /* =============
    Bootstrap Range slider
 ============= */
+
 .slider{
   .slider-horizontal {
     margin: 10px 0;
@@ -688,9 +689,9 @@ File: Pages
 
 
 
-/* =============
-   Sweet Alert
-============= */
+/* =========== */
+/* Sweet Alert */
+/* =========== */
 
 .sweet-alert {
   p {
@@ -710,7 +711,7 @@ button.confirm {
    Charts
 ============= */
 
-/* Morris charts */
+/* Morris chart */
 .morris-hover.morris-default-style {
     border-radius: 5px;
     padding: 10px 12px;
@@ -779,7 +780,7 @@ button.confirm {
   }
 }
 
-/* Flot chart */
+
 #flotTip {
   padding: 8px 12px;
   background-color: #36404a;
@@ -862,20 +863,17 @@ button.confirm {
     font-size: 16px;
   }
 }
-.ct-grid {
-  stroke: rgba(0, 0, 0, .1);
-}
 .ct-chart .ct-series.ct-series-a .ct-bar, .ct-chart .ct-series.ct-series-a .ct-line, .ct-chart .ct-series.ct-series-a .ct-point, .ct-chart .ct-series.ct-series-a .ct-slice-donut {
-    stroke: @primary;
-}
-.ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-slice-donut {
-    stroke: @pink;
-}
-.ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-slice-donut {
     stroke: @info;
 }
-.ct-chart .ct-series.ct-series-d .ct-bar, .ct-chart .ct-series.ct-series-d .ct-line, .ct-chart .ct-series.ct-series-d .ct-point, .ct-chart .ct-series.ct-series-d .ct-slice-donut {
+.ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-slice-donut {
     stroke: @custom;
+}
+.ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-slice-donut {
+    stroke: @pink;
+}
+.ct-chart .ct-series.ct-series-d .ct-bar, .ct-chart .ct-series.ct-series-d .ct-line, .ct-chart .ct-series.ct-series-d .ct-point, .ct-chart .ct-series.ct-series-d .ct-slice-donut {
+    stroke: @primary;
 }
 .ct-chart .ct-series.ct-series-e .ct-bar, .ct-chart .ct-series.ct-series-e .ct-line, .ct-chart .ct-series.ct-series-e .ct-point, .ct-chart .ct-series.ct-series-e .ct-slice-donut {
     stroke: @dark;
@@ -887,16 +885,16 @@ button.confirm {
     stroke: @success;
 }
 .ct-series-a .ct-area, .ct-series-a .ct-slice-pie {
-    fill: @primary;
-}
-.ct-series-b .ct-area, .ct-series-b .ct-slice-pie {
-    fill: @pink;
-}
-.ct-series-c .ct-area, .ct-series-c .ct-slice-pie {
     fill: @info;
 }
-.ct-series-d .ct-area, .ct-series-d .ct-slice-pie {
+.ct-series-b .ct-area, .ct-series-b .ct-slice-pie {
     fill: @custom;
+}
+.ct-series-c .ct-area, .ct-series-c .ct-slice-pie {
+    fill: @pink;
+}
+.ct-series-d .ct-area, .ct-series-d .ct-slice-pie {
+    fill: @primary;
 }
 
 
@@ -936,11 +934,11 @@ button.confirm {
 }
 
 
-
-
 /* =============
    Count Down
 ============= */
+
+
 .home-wrapper {
   margin: 10% 0px;
 }
@@ -985,10 +983,8 @@ button.confirm {
 }
 
 
-
-
 /* =============
-   Timelines
+   Timeline
 ============= */
 
 .cd-container {
@@ -1227,6 +1223,10 @@ button.confirm {
 }
 
 
+
+
+
+
 /* Time line 2 */
 
 .timeline-2 {
@@ -1292,12 +1292,10 @@ button.confirm {
 }
 
 
-
-
-
 /* =============
    Email
 ============= */
+
 
 .mails {
   a {
@@ -1364,8 +1362,6 @@ button.confirm {
 }
 
 
-
-
 /* =============
    Gallery
 ============= */
@@ -1421,12 +1417,11 @@ button.confirm {
 }
 
 
-
-
-
 /* =============
    Maintenance
 ============= */
+
+
 
 .icon-main {
   font-size: 88px;
@@ -1438,11 +1433,10 @@ button.confirm {
 }
 
 
-
-
 /* =============
    Maps
 ============= */
+
 
 .gmaps, .gmaps-panaroma {
   height: 300px;
@@ -1494,10 +1488,10 @@ button.confirm {
 
 
 
-
 /* =============
    Nestable
 ============= */
+
 
 .custom-dd {
   .dd-list {
@@ -1711,9 +1705,6 @@ button.confirm {
 
 
 
-
-
-
 /* =============
    Profile
 ============= */
@@ -1824,11 +1815,10 @@ button.confirm {
 }
 
 
-
-
 /* =============
    Extra pages
 ============= */
+
 
 /*  sitemap-wrapper */
 
@@ -1862,6 +1852,7 @@ button.confirm {
   }
 }
 
+
 /*======= FAQ ======*/
 .faq-box {
   padding: 24px 0px;
@@ -1878,6 +1869,8 @@ button.confirm {
   }
 }
 
+
+
 /* Search result */
 
 .search-result-box {
@@ -1892,6 +1885,8 @@ button.confirm {
     margin-bottom: 30px;
   }
 }
+
+
 
 /*  Contact */
 
@@ -1941,6 +1936,87 @@ button.confirm {
     display: none;
   }
 }
+
+
+/*  Image crop */
+#showDataURL {
+  img {
+    width: 100%;
+  }
+}
+
+/* Switchery demo */
+.switchery-demo {
+  .switchery {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+/* Chat app */
+
+.chat-app-list {
+  padding: 0px 20px;
+
+  .list-group-item {
+    background: transparent;
+  }
+}
+
+.chat-ready {
+
+  .conversation-list {
+    max-height: 800px;
+  }
+  .spinner {
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: #E3E3E3;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+}
+
+
+
+
 
 /* Opportunities page */
 
@@ -2040,6 +2116,7 @@ button.confirm {
    Accounts pages
 ============= */
 
+
 .account-pages {
   background: url("../images/agsquare.png");
   position: absolute;
@@ -2099,10 +2176,13 @@ button.confirm {
   }
 }
 
+
 /* signup-signin-page */
+
 .signup-signin-page {
   width: auto;
 }
+
 
 /* =============
    Tree view page
@@ -2111,18 +2191,18 @@ button.confirm {
 
 .jstree-default {
   .jstree-clicked {
-    background: fade(@custom, 40%);
+    background: fade(@info, 40%);
     box-shadow: none;
   }
   .jstree-hovered {
-    background: fade(@custom, 20%);
+    background: fade(@info, 20%);
     box-shadow: none;
   }
   .jstree-wholerow-clicked {
-    background: fade(@custom, 40%);
+    background: fade(@info, 40%);
   }
   .jstree-wholerow-hovered {
-    background: fade(@custom, 20%);
+    background: fade(@info, 20%);
   }
   .zmdi {
     font-size: 16px;
@@ -2135,20 +2215,20 @@ button.confirm {
 ============= */
 
 div.hopscotch-bubble {
-  border: 3px solid @primary;
+  border: 3px solid @info;
   .border-radius(5px);
 
   .hopscotch-next {
-    background-color: @primary !important;
+    background-color: @info !important;
     background-image: none !important;
-    border-color: @primary !important;
+    border-color: @info !important;
     text-shadow: none !important;
     margin: 0 0 0 5px !important;
   }
   .hopscotch-prev {
-    background-color: @primary !important;
+    background-color: @info !important;
     background-image: none !important;
-    border-color: @primary !important;
+    border-color: @info !important;
     text-shadow: none !important;
     color: @white !important;
   }
@@ -2159,30 +2239,31 @@ div.hopscotch-bubble .hopscotch-bubble-number {
   .border-radius(50%);
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow-border {
-    border-right: 19px solid @primary;
+    border-right: 19px solid @info;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow {
-    border-left: 19px solid @primary;
+    border-left: 19px solid @info;
     left: -2px;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow {
     border: none;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow-border {
-  border-left: 0px solid @primary;
+  border-left: 0px solid @info;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow {
-  border-bottom: 19px solid @primary;
+  border-bottom: 19px solid @info;
   top: 0px;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow-border {
   border-bottom: 0px solid rgba(0,0,0,.5);
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow {
-  border-top: 19px solid @primary;
+  border-top: 19px solid @info;
   top: -2px;
 }
 div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow-border {
   border-top: 0px solid rgba(0,0,0,.5);
 }
+
 

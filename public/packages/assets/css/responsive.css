@@ -90,6 +90,9 @@ File: Responsive
     width: 100%;
     text-align: left;
   }
+  .ms-container {
+    width: 100%;
+  }
   .email-msg {
     display: none;
   }

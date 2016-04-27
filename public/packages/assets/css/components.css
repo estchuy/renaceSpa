@@ -48,8 +48,8 @@ File: Components
 .btn-default:focus,
 .btn-default:hover,
 .open > .dropdown-toggle.btn-default {
-  background-color: #58c9c7 !important;
-  border: 1px solid #58c9c7 !important;
+  background-color: #7e57c2 !important;
+  border: 1px solid #7e57c2 !important;
 }
 .btn-white,
 .btn-white:hover,
@@ -209,7 +209,7 @@ File: Components
   border-width: 2px !important;
 }
 .btn-custom.btn-default {
-  color: #58c9c7 !important;
+  color: #7e57c2 !important;
 }
 .btn-custom.btn-primary {
   color: #5d9cec !important;
@@ -438,8 +438,8 @@ File: Components
   height: 17px;
 }
 .checkbox-custom input[type="checkbox"]:checked + label::before {
-  background-color: #58c9c7;
-  border-color: #58c9c7;
+  background-color: #7e57c2;
+  border-color: #7e57c2;
 }
 .checkbox-custom input[type="checkbox"]:checked + label::after {
   color: #ffffff;
@@ -556,6 +556,7 @@ File: Components
 }
 .radio input[type="radio"]:focus + label::before {
   outline-offset: -2px;
+  outline: 5px auto -webkit-focus-ring-color;
   outline: thin dotted;
 }
 .radio input[type="radio"]:checked + label::after {
@@ -574,13 +575,13 @@ File: Components
   height: 17px;
 }
 .radio-custom input[type="radio"] + label::after {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
 }
 .radio-custom input[type="radio"]:checked + label::before {
-  border-color: #58c9c7;
+  border-color: #7e57c2;
 }
 .radio-custom input[type="radio"]:checked + label::after {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
 }
 .radio-primary input[type="radio"] + label::after {
   background-color: #5d9cec;
@@ -686,7 +687,7 @@ File: Components
   color: #ffffff;
 }
 .panel-custom > .panel-heading {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
 }
 .panel-primary > .panel-heading {
   background-color: #5d9cec;
@@ -721,8 +722,8 @@ File: Components
   padding: 15px 20px 20px 20px;
 }
 .panel-border.panel-custom .panel-heading {
-  border-color: #58c9c7 !important;
-  color: #58c9c7 !important;
+  border-color: #7e57c2 !important;
+  color: #7e57c2 !important;
 }
 .panel-border.panel-primary .panel-heading {
   border-color: #5d9cec !important;
@@ -975,7 +976,7 @@ File: Components
   background-color: #fb6d9d;
 }
 .progress-bar-custom {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
 }
 .progress-animated {
   -webkit-animation-duration: 5s;
@@ -1094,11 +1095,11 @@ th {
   border: 1px solid #ebeff2;
 }
 table.focus-on tbody tr.focused th {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
   color: #ffffff;
 }
 table.focus-on tbody tr.focused td {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
   color: #ffffff;
 }
 .table-rep-plugin .table-responsive {
@@ -1167,8 +1168,8 @@ table.focus-on tbody tr.focused td {
   cursor: not-allowed;
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:checked + label::before {
-  background-color: #58c9c7;
-  border-color: #58c9c7;
+  background-color: #7e57c2;
+  border-color: #7e57c2;
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:checked + label::after {
   color: #ffffff;
@@ -1313,7 +1314,7 @@ table[data-toggle="table"] {
 .tablesaw-enhanced .tablesaw-bar .btn:hover,
 .tablesaw-enhanced .tablesaw-bar .btn:focus,
 .tablesaw-enhanced .tablesaw-bar .btn:active {
-  color: #58c9c7 !important;
+  color: #7e57c2 !important;
   background-color: #ebeff2;
   outline: none !important;
   box-shadow: none !important;
@@ -1326,7 +1327,7 @@ table[data-toggle="table"] {
 /* Key Table */
 table.dataTable th.focus,
 table.dataTable td.focus {
-  outline: 3px solid #58c9c7 !important;
+  outline: 3px solid #7e57c2 !important;
   outline-offset: -1px;
 }
 /* ColVid Tables */
@@ -1342,8 +1343,8 @@ button.ColVis_Button,
   background: none;
   box-shadow: none;
   color: #ffffff !important;
-  background-color: #58c9c7 !important;
-  border: 1px solid #58c9c7 !important;
+  background-color: #7e57c2 !important;
+  border: 1px solid #7e57c2 !important;
 }
 .dataTables_length {
   float: left;
@@ -1367,7 +1368,7 @@ ul.ColVis_collection li {
   float: left;
 }
 /* =============
-   Widget
+   Widgets
 ============= */
 /* Widget-box styles */
 .widget-box-1 i.inform {
@@ -1423,8 +1424,8 @@ ul.ColVis_collection li {
   border: 1px solid #81c868;
 }
 .widget-bg-color-icon .bg-icon-custom {
-  background-color: rgba(0, 150, 136, 0.2);
-  border: 1px solid #58c9c7;
+  background-color: rgba(126, 87, 194, 0.2);
+  border: 1px solid #7e57c2;
 }
 .widget-bg-color-icon .bg-icon-warning {
   background-color: rgba(255, 189, 74, 0.2);
@@ -1613,7 +1614,6 @@ ul.ColVis_collection li {
   font-size: 16px;
 }
 .todo-list li {
-  border-bottom: 1px solid #eeeeee;
   border-radius: 0px;
   border: 0px;
   margin: 0px;
@@ -1638,7 +1638,7 @@ ul.ColVis_collection li {
   border-radius: 4px;
   position: relative;
   margin-bottom: 20px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -1px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
 }
 .widget-panel i {
   font-size: 60px;
@@ -1697,8 +1697,8 @@ ul.ColVis_collection li {
   font-size: 20px;
 }
 .table-actions-bar .table-action-btn:hover {
-  color: #58c9c7;
-  border-color: #58c9c7;
+  color: #7e57c2;
+  border-color: #7e57c2;
 }
 /* Transaction */
 .transaction-list li {
@@ -1841,28 +1841,28 @@ ul.ColVis_collection li {
 }
 .blog-box-one .post-info .date {
   float: left;
-  border-bottom: 3px solid #58c9c7;
+  border-bottom: 3px solid #71b6f9 ;
 }
-.blog-box-one .post-info .date .day {
+.post-info .date .day {
   font-size: 22px;
   color: #333;
   font-weight: 600;
   line-height: 22px;
 }
-.blog-box-one .post-info .date .month {
+.post-info .date .month {
   text-transform: uppercase;
   text-align: center;
   width: 100%;
   display: inline-block;
+}
+.blog-box-one .meta {
+  padding-left: 0px;
 }
 .blog-box-one .post-info .meta-container {
   padding-left: 55px;
 }
 .blog-box-one .post-info p {
   margin-top: 15px;
-}
-.blog-box-one .meta {
-  padding-left: 0px;
 }
 .blog-widget-action a {
   color: #98a6ad;
@@ -1935,13 +1935,13 @@ ul.ColVis_collection li {
 .datepicker table tr td span.active:hover[disabled],
 .datepicker table tr td span.active.disabled[disabled],
 .datepicker table tr td span.active.disabled:hover[disabled] {
-  background-color: #58c9c7;
+  background-color: #7e57c2;
 }
 .datepicker table tr td.active,
 .datepicker table tr td.active:hover,
 .datepicker table tr td.active.disabled,
 .datepicker table tr td.active.disabled:hover {
-  background-color: #58c9c7 !important;
+  background-color: #7e57c2 !important;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
@@ -2047,7 +2047,7 @@ ul.ColVis_collection li {
 .editor-horizontal .popover-content {
   padding: 9px 30px;
 }
-/* Form wizard */
+/* Wizard */
 .wizard > .content {
   background: #ffffff;
   min-height: 240px;
@@ -2100,16 +2100,16 @@ ul.ColVis_collection li {
   border: 1px solid #eaeaea;
 }
 .wizard > .steps .current a {
-  background: #58c9c7;
+  background: #7e57c2;
 }
 .wizard > .steps .current a:hover {
-  background: #58c9c7;
+  background: #7e57c2;
 }
 .wizard > .steps .current a:hover .number {
   color: #ffffff;
 }
 .wizard > .steps .current a:active {
-  background: #58c9c7;
+  background: #7e57c2;
 }
 .wizard > .steps .current a:active .number {
   color: #ffffff;
@@ -2133,17 +2133,17 @@ ul.ColVis_collection li {
   border-radius: 2px;
 }
 .wizard > .actions a {
-  background: #58c9c7;
+  background: #7e57c2;
   border-radius: 2px;
   color: #ffffff;
 }
 .wizard > .actions a:hover {
-  background: #58c9c7;
+  background: #7e57c2;
   border-radius: 2px;
   color: #ffffff;
 }
 .wizard > .actions a:active {
-  background: #58c9c7;
+  background: #7e57c2;
   border-radius: 2px;
   color: #ffffff;
 }
@@ -2248,7 +2248,4 @@ a.editable-click:hover {
 }
 .img-preview > img {
   max-width: 100%;
-}
-#showDataURL img {
-  width: 100%;
 }

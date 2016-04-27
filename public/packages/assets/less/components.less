@@ -542,6 +542,7 @@ File: Components
   input[type="radio"]:focus + label {
     &::before {
       outline-offset: -2px;
+      outline: 5px auto -webkit-focus-ring-color;
       outline: thin dotted;
     }
   }
@@ -1039,6 +1040,7 @@ File: Components
    Progressbars
 ============= */
 
+
 .progress {
   -webkit-box-shadow: none !important;
   background-color: @light5;
@@ -1332,7 +1334,6 @@ table.focus-on {
     background-color: #F4F8FB;
 }
 
-
 .modal-block {
   background: transparent;
   margin: 40px auto;
@@ -1492,12 +1493,12 @@ table[data-toggle="table"] {
     top: 60px !important;
   }
   /* Key Table */
-table.dataTable th.focus, table.dataTable td.focus {
-  outline: 3px solid @custom !important;
-  outline-offset: -1px
-}
+  table.dataTable th.focus,table.dataTable td.focus{
+    outline:3px solid @custom !important;
+    outline-offset:-1px
+  }
 
-/* ColVid Tables */
+  /* ColVid Tables */
   div.ColVis {
     float: none;
     margin-right: 30px;
@@ -1537,10 +1538,8 @@ table.dataTable th.focus, table.dataTable td.focus {
 
 
 
-
-
 /* =============
-   Widget
+   Widgets
 ============= */
 
 /* Widget-box styles */
@@ -1582,47 +1581,47 @@ table.dataTable th.focus, table.dataTable td.focus {
   }
 
   .bg-icon-info {
-    background-color: rgba(52, 211, 235, 0.2);
+    background-color: fade(@info,20%);
     border: 1px solid @info;
   }
 
   .bg-icon-primary {
-    background-color: rgba(93, 156, 236, 0.2);
+    background-color: fade(@primary,20%);
     border: 1px solid @primary;
   }
 
   .bg-icon-pink {
-    background-color: rgba(251, 109, 157, 0.2);
+    background-color: fade(@pink,20%);
     border: 1px solid @pink;
   }
 
   .bg-icon-purple {
-    background-color: rgba(114, 102, 186, 0.2);
+    background-color: fade(@purple,20%);
     border: 1px solid @purple;
   }
 
   .bg-icon-success {
-    background-color: rgba(129, 200, 104, 0.2);
+    background-color: fade(@success,20%);
     border: 1px solid @success;
   }
 
   .bg-icon-custom {
-    background-color: rgba(0, 150, 136, 0.2);
+    background-color: fade(@custom,20%);
     border: 1px solid @custom;
   }
 
   .bg-icon-warning {
-    background-color: rgba(255, 189, 74, 0.2);
+    background-color: fade(@warning,20%);
     border: 1px solid @warning;
   }
 
   .bg-icon-danger {
-    background-color: rgba(240, 80, 80, 0.2);
+    background-color: fade(@danger,20%);
     border: 1px solid @danger;
   }
 
   .bg-icon-inverse {
-    background-color: rgba(76, 86, 103, 0.2);
+    background-color: fade(@inverse,20%);
     border: 1px solid @inverse;
   }
 
@@ -1822,7 +1821,6 @@ table.dataTable th.focus, table.dataTable td.focus {
 
 .todo-list {
   li {
-    border-bottom: 1px solid #eeeeee;
     border-radius: 0px;
     border: 0px;
     margin: 0px;
@@ -1850,14 +1848,13 @@ table.dataTable th.focus, table.dataTable td.focus {
   }
 }
 
-
 .widget-panel {
   padding: 30px 20px;
   padding-left: 30px;
   border-radius: 4px;
   position: relative;
   margin-bottom: 20px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 -1px 4px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
 
    i {
     font-size: 60px;
@@ -1909,6 +1906,9 @@ table.dataTable th.focus, table.dataTable td.focus {
 .gmap-buttons .btn { margin-left: 3px;}
 /* Google maps ends */
 
+
+
+
 /* Table with Action */
 .table-actions-bar {
   tr {
@@ -1931,6 +1931,8 @@ table.dataTable th.focus, table.dataTable td.focus {
     }
   }
 }
+
+
 
 /* Transaction */
 
@@ -1959,6 +1961,7 @@ table.dataTable th.focus, table.dataTable td.focus {
     margin-left: 30px;
   }
 }
+
 
 /* Friend list */
 
@@ -2004,6 +2007,9 @@ table.dataTable th.focus, table.dataTable td.focus {
     }
   }
 }
+
+
+
 
 /*  Bar widget */
 
@@ -2072,67 +2078,63 @@ table.dataTable th.focus, table.dataTable td.focus {
 
 .blog-box-one {
   margin-bottom: 20px;
-
-  .cover-wrapper {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    border-top-left-radius: 4px !important;
-    border-top-right-radius: 4px !important;
-     img {
-      transition: all .3s ease;
-      -webkit-transition: all .3s ease;
-      -moz-transition: all .3s ease;
-      border-top-left-radius: 4px !important;
-      border-top-right-radius: 4px !important;
-    }
-    &:hover img {
-      -ms-transform: scale(1.1, 1.1);
-      -webkit-transform: scale(1.1, 1.1);
-      transform: scale(1.1, 1.1);
-    }
-
-  }
-
-  .post-info {
-    background-color: @white;
-    padding: 20px;
-    border-bottom-left-radius: 4px !important;
-    border-bottom-right-radius: 4px !important;
-
-    .date {
-      float: left;
-      border-bottom: 3px solid @custom;
-
-      .day {
-        font-size: 22px;
-        color: #333;
-        font-weight: 600;
-        line-height: 22px;
-      }
-      .month {
-        text-transform: uppercase;
-        text-align: center;
-        width: 100%;
-        display: inline-block;
-      }
-    }
-    .meta-container {
-      padding-left: 55px;
-    }
-    p {
-      margin-top: 15px;
-    }
-  }
-
-  .meta {
-    padding-left: 0px;
-  }
+}
+.blog-box-one .cover-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
 }
 
+.blog-box-one .cover-wrapper img {
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
 
+.blog-box-one .cover-wrapper:hover img {
+  -ms-transform: scale(1.1,1.1);
+  -webkit-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+}
 
+.blog-box-one .post-info {
+  background-color: @white;
+  padding: 20px;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.blog-box-one .post-info .date{
+  float: left;
+  border-bottom: 3px solid #71b6f9 ;
+}
+.post-info .date .day{
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+  line-height: 22px;
+}
+.post-info .date .month{
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.blog-box-one .meta {
+  padding-left: 0px;
+}
+
+.blog-box-one .post-info .meta-container {
+  padding-left: 55px;
+}
+.blog-box-one .post-info p {
+  margin-top: 15px;
+}
 
 .blog-widget-action {
   a{
@@ -2143,17 +2145,17 @@ table.dataTable th.focus, table.dataTable td.focus {
 }
 
 
-
-
 /* =============
    Form elements
 ============= */
+
 
 .error {
   color: @danger;
   font-size: 12px;
   font-weight: 500;
 }
+
 /* Form validation */
 .parsley-error {
   border-color: @danger !important;
@@ -2332,7 +2334,7 @@ table.dataTable th.focus, table.dataTable td.focus {
     padding: 9px 30px;
   }
 }
-/* Form wizard */
+/* Wizard */
 .wizard > .content {
   background: @white;
   min-height: 240px;
@@ -2466,6 +2468,8 @@ table.dataTable th.focus, table.dataTable td.focus {
   }
 }
 
+
+
 /* Dropzone */
 .dropzone {
   min-height: 230px;
@@ -2482,6 +2486,7 @@ table.dataTable th.focus, table.dataTable td.focus {
 .editable-click, a.editable-click, a.editable-click:hover{
   border: none;
 }
+
 /* AUTOCOMPLETE */
 .autocomplete-suggestions {
   border: 1px solid #f9f9f9;
@@ -2524,7 +2529,9 @@ table.dataTable th.focus, table.dataTable td.focus {
   display: block;
 }
 
+
 /* Image crop */
+
 .img-container,
 .img-preview {
   background-color: #f7f7f7;
@@ -2562,10 +2569,4 @@ table.dataTable th.focus, table.dataTable td.focus {
 
 .img-preview > img {
   max-width: 100%;
-}
-
-#showDataURL {
-  img {
-    width: 100%;
-  }
 }

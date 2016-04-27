@@ -21,9 +21,9 @@
                 ],
                 type: 'bar',
                 colors: {
-                    data1: '#dcdcdc',
-                    data2: '#5d9cec',
-                    data3: '#5fbeaa'
+                    data1: '#ebeff2',
+                    data2: '#7e57c2',
+                    data3: '#34d3eb'
                 }
                 
             }
@@ -48,9 +48,9 @@
                     data5: 'bar'
                 },
                 colors: {
-                    data1: '#dcdcdc',
-                    data2: '#5d9cec',
-                    data3: '#36404a',
+                    data1: '#ebeff2',
+                    data2: '#7e57c2',
+                    data3: '#34d3eb',
                     data4: '#fb6d9d',
                     data5: '#5fbeaa'
                 },
@@ -77,8 +77,8 @@
                 data1: 'bar'
                 },
                 colors: {
-	                data1: '#5fbeaa',
-	                data2: '#5d9cec'
+	                data1: '#34d3eb',
+	                data2: '#7e57c2'
 	            },
             },
             axis: {
@@ -103,8 +103,8 @@
                     // 'line', 'spline', 'step', 'area', 'area-step' are also available to stack
                 },
                 colors: {
-                    data1: '#5fbeaa',
-                    data2: '#5d9cec',
+                    data1: '#34d3eb',
+	                data2: '#7e57c2'
                 }
             }
         });
@@ -128,7 +128,7 @@
 				}
             },
             color: {
-            	pattern: ["#f4f8fb", "#5d9cec", "#5fbeaa"]
+            	pattern: ['#7e57c2', '#34d3eb', "#ebeff2"]
             }
         });
         
@@ -144,7 +144,7 @@
                 type : 'pie'
             },
             color: {
-            	pattern: ["#f4f8fb", "#5d9cec", "#5fbeaa"]
+            	pattern: ['#7e57c2', '#34d3eb', "#ebeff2"]
             },
             pie: {
 		        label: {
@@ -166,8 +166,8 @@
 		            'data2': [{'end':3}]
 		        },
 		        colors: {
-	                data1: '#5d9cec',
-	                data2: '#fb6d9d'
+	                data1: '#34d3eb',
+	                data2: '#7e57c2'
 	            },
             },
             

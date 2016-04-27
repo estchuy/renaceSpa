@@ -12,7 +12,7 @@ $( document ).ready(function() {
             width: $('#sparkline1').width(),
             height: '165',
             chartRangeMax: 50,
-            lineColor: '#fb6d9d',
+            lineColor: '#7e57c2',
             fillColor: 'transparent',
             highlightLineColor: 'rgba(0,0,0,.1)',
             highlightSpotColor: 'rgba(0,0,0,.2)'
@@ -23,7 +23,7 @@ $( document ).ready(function() {
             width: $('#sparkline1').width(),
             height: '165',
             chartRangeMax: 40,
-            lineColor: '#5d9cec',
+            lineColor: '#34d3eb',
             fillColor: 'transparent',
             composite: true,
             highlightLineColor: 'rgba(0,0,0,1)',
@@ -35,14 +35,14 @@ $( document ).ready(function() {
             height: '165',
             barWidth: '10',
             barSpacing: '3',
-            barColor: '#fb6d9d'
+            barColor: '#34d3eb'
         });
         
-        $('#sparkline3').sparkline([20, 40, 30, 10], {
+        $('#sparkline3').sparkline([20, 45, 35], {
             type: 'pie',
             width: '165',
             height: '165',
-            sliceColors: ['#dcdcdc', '#5d9cec', '#36404a', '#5fbeaa']
+            sliceColors: ['#dcdcdc', '#34d3eb', '#7e57c2']
         });
     
 

@@ -1,5 +1,5 @@
 /**
-* Theme: Velonic Admin Template
+* Theme: Ubold Admin Template
 * Author: Coderthemes
 * Module/App: RickshawChart Application
 */
@@ -217,7 +217,7 @@
       }
 
       //create live area graph
-      var colors = ['#5fbeaa', '#ebeff2'];
+      var colors = ['#34d3eb', '#ebeff2'];
       var labels = ['Moscow', 'Shanghai'];
       this.createAreaGraph("#linechart", seriesData, random, colors, labels);
 
@@ -229,7 +229,7 @@
                 { x: 3, y: 28 }, 
                 { x: 4, y: 20 } 
             ];
-      var simpleAcolors = ['#5fbeaa'];
+      var simpleAcolors = ['#34d3eb'];
       this.createSimpleareaGraph("#simplearea", simpleAdata, simpleAcolors);
 
       //create Multiple area graph
@@ -247,17 +247,17 @@
                     { x: 3, y: 30 }, 
                     { x: 4, y: 32 }  
         ];
-      var MultipleAcolors = ['#5fbeaa','#ebeff2'];
+      var MultipleAcolors = ['#7e57c2','#ebeff2'];
       this.createMultipleareaGraph("#multiplearea", multipleAdata1, multipleAdata2, MultipleAcolors);
 
       //create Line-Toggle graph
       var height = [250];
-      var LineTcolors = ["#5fbeaa", "#5d9cec","#36404a"];
+      var LineTcolors = ['#7e57c2', '#34d3eb', "#ebeff2"];
       var names = ['New York', 'London','Tokyo'];
       this.createLinetoggleGraph("linetoggle", height, LineTcolors, names);
 
       //create Line-plot graph
-      var LinePlotcolors = ['#5fbeaa','#5d9cec'];
+      var LinePlotcolors = ['#7e57c2', '#34d3eb'];
       var linePnames = ["Series 1", "Series 2"];
       this.createLinePlotGraph("lineplotchart", LinePlotcolors, linePnames);
 

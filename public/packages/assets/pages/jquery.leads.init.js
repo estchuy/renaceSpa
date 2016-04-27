@@ -39,7 +39,7 @@
             { y: 'Sat', a: 75,  b: 65 },
             { y: 'Sun', a: 50,  b: 40 }
         ];
-        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b'], ['Series A', 'Series B'], ['#5d9cec', '#ebeff2']);
+        this.createStackedChart('morris-bar-stacked', $stckedData, 'y', ['a', 'b'], ['Series A', 'Series B'], ['#34d3eb', '#ebeff2']);
 
     },
     //init

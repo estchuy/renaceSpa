@@ -2,18 +2,18 @@
 /**
 * Theme: Ubold Admin Template
 * Author: Coderthemes
-* Dashboard 2
+* eCommerce Dashboard
 */
 
 !function($) {
     "use strict";
 
-    var Dashboard2 = function() {
+    var eCommerceDashboard = function() {
     	this.$realData = []
     };
-    
-     //creates area chart with dotted
-    Dashboard2.prototype.createAreaChartDotted = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, Pfillcolor, Pstockcolor, lineColors) {
+
+    //creates area chart with dotted
+    eCommerceDashboard.prototype.createAreaChartDotted = function(element, pointSize, lineWidth, data, xkey, ykeys, labels, Pfillcolor, Pstockcolor, lineColors) {
         Morris.Area({
             element: element,
             pointSize: 0,
@@ -31,9 +31,9 @@
         });
 
    },
-    Dashboard2.prototype.init = function() {
+    eCommerceDashboard.prototype.init = function() {
 
-         //creating area chart
+        //creating area chart
         var $areaDotData = [
                 { y: '2009', a: 10, b: 20, c:30 },
                 { y: '2010', a: 75,  b: 65, c:30 },
@@ -43,15 +43,15 @@
                 { y: '2014', a: 75,  b: 65, c:30 },
                 { y: '2015', a: 90, b: 60, c:30 }
             ];
-        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a', 'b', 'c'], ['Desktops ', 'Tablets ', 'Mobiles '],['#ffffff'],['#999999'], ['#36404a', '#5d9cec','#bbbbbb']);
+        this.createAreaChartDotted('morris-area-with-dotted', 0, 0, $areaDotData, 'y', ['a', 'b', 'c'], ['Desktops ', 'Tablets ', 'Mobiles '],['#ffffff'],['#999999'], ['#7e57c2', '#b39ddb', '#ede7f6']);
 
     },
     //init
-    $.Dashboard2 = new Dashboard2, $.Dashboard2.Constructor = Dashboard2
+    $.eCommerceDashboard = new eCommerceDashboard, $.eCommerceDashboard.Constructor = eCommerceDashboard
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
     "use strict";
-    $.Dashboard2.init();
+    $.eCommerceDashboard.init();
 }(window.jQuery);

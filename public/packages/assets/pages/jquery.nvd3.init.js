@@ -29,15 +29,15 @@
         return [{
             values: sin,
             key: 'Sine Wave',
-            color: "#5d9cec"
+            color: "#7e57c2"
         }, {
             values: cos,
             key: 'Cosine Wave',
-            color: "#fb6d9d"
+            color: "#34d3eb"
         }, {
             values: sin2,
             key: 'Custom sine',
-            color: "#34d3eb"
+            color: "#ebeff2"
         }];
     }
     nv.addGraph(function() {
@@ -143,7 +143,7 @@
     }
     var long_short_data = [{
         'key': 'Series 1',
-        'color': "#5d9cec",
+        'color': "#7e57c2",
         'values': [{
             'label': 'Group A',
             'value': -1.8746444827653
