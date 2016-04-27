@@ -15,6 +15,14 @@
         <!-- Form advanced -->
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/select2/select2.css" rel="stylesheet" type="text/css" /> 
 
+        <!-- DataTables -->
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -271,6 +279,27 @@
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.nicescroll.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.scrollTo.min.js"></script>
 
+         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.bootstrap.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/jszip.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/pdfmake.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/vfs_fonts.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/buttons.print.min.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.fixedHeader.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/plugins/datatables/dataTables.colVis.js"></script>
+
+        <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/pages/datatables.init.js"></script>
+
+
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.core.js"></script>
         <script src="http://<?php echo $_SERVER['SERVER_NAME']; ?>/packages/assets/js/jquery.app.js"></script>
 
@@ -322,7 +351,24 @@
           $('.autonumber').autoNumeric('init');    
       });
         </script>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#datatable').dataTable();
+                $('#datatable-keytable').DataTable( { keys: true } );
+                $('#datatable-responsive').DataTable();
+                $('#datatable-colvid').DataTable({
+                    "dom": 'C<"clear">lfrtip',
+                    "colVis": {
+                        "buttonText": "Change columns"
+                    }
+                });
+                $('#datatable-scroller').DataTable( { ajax: "assets/plugins/datatables/json/scroller-demo.json", deferRender: true, scrollY: 380, scrollCollapse: true, scroller: true } );
+                var table = $('#datatable-fixed-header').DataTable( { fixedHeader: true } );
+            } );
+            TableManageButtons.init();
 
+        </script>
           <script>
         jQuery(document).ready(function() {
 
