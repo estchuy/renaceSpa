@@ -1,38 +1,23 @@
 @section('content')
-<section class="wrapper">
-	<div class="row">
-	  <div class="col-md-12">
-	      <div class="content-panel">
-	          <table class="table table-striped table-advance table-hover">
-	          	<form method="get" class="form-horizontal tasi-form" id="clientForm" action="/clients">
-		      	 	<div class="form-group">
-				       	<label class="col-sm-2 control-label"><h4><i class="fa fa-users"></i> Clientes</h4></label>
-			  			<div class="col-sm-5">
-			            	<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="form-control round-form">
-			            </div>
-			  			<div class="col-sm-1">
-			            	<button type="button" class="btn btn-round btn-warning" onclick="javascript:document.getElementById('clientForm').submit();">Buscar</button>
-			  			</div>
-			  			<div class="col-sm-1">
-			            	<button type="button" class="btn btn-round btn-primary" onclick="javascript:window.location = '/clients/new';">Nuevo</button>
-			  			</div>
-			            <div class="col-sm-12">
-			             	<hr>
-			            </div>
-	  				</div>
-  				</form>
-	              <thead>
-	              <tr>
-	                  <th><i class="fa fa-user"></i> Cliente</th>
-	                  <th><i class="fa fa-sort-numeric-asc"></i> Prestamos</th>
-	                  <th><i class="fa fa-th"></i> Cuotas</th>
-	                  <th><i class="fa fa-external-link"></i> Intere</th>
-	                  <th><i class="fa fa-money"></i> Total</th>
-	                  <th></th>
-	              </tr>
-	              </thead>
-	              <tbody>
-	              @foreach($clients as $client)	
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box table-responsive">
+            <h4 class="m-t-0 header-title"><i class="md icon-people "></i> <b>Clientes</b></h4>
+
+            <table id="datatable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Servicios</th>
+                        <th>Total Pagado</th>
+                        <th>Total Invertido</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    @foreach($clients as $client)	
 	              <?php
 	              	$loanDetails = Loan::getLoanInfo($client->id);
 	              	$countLoans = 0;
@@ -49,14 +34,13 @@
 		                <td>{{$countLoans}}</td>
 		                <td>Q{{number_format($totalMonth, 2, '.', ',')}}</td>
 		                <td>Q{{number_format(Loan::getTotalInteresLoanClient($client->id), 2, '.', ',')}}</td>
-		                <td>Q{{number_format($totalLoans, 2, '.', ',')}}</td>
-		                <td><button class="btn btn-primary btn-sm" type="button" onclick="javascript:window.location = '/loan/{{$client->id}}/new';">Crear Prestamo</button></td>
-	              	</tr>
+		                <td></td>
+		             </tr>
 	              	@endforeach
 	           	</tbody>
-	          </table>
-	      </div><!-- /content-panel -->
-	  </div><!-- /col-md-12 -->
-	</div><!-- /row -->
-</section>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 @stop
